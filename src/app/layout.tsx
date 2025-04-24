@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { Providers } from '@/components/providers'
 import { mono, sans } from '@/lib/font'
 import '@/styles/globals.css'
 
@@ -17,7 +18,17 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       lang="en"
       className={`${sans.variable} antialiased ${mono.variable}`}
     >
-      <body>{children}</body>
+      {process.env.NODE_ENV === 'development' && (
+        <head>
+          <script
+            crossOrigin="anonymous"
+            src="//unpkg.com/react-scan/dist/auto.global.js"
+          />
+        </head>
+      )}
+      <body>
+        <Providers>{children}</Providers>
+      </body>
     </html>
   )
 }
