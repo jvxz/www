@@ -1,10 +1,11 @@
 import type { Metadata } from 'next'
+import { Noise } from '@/components/noise'
 import { Providers } from '@/components/providers'
 import { mono, sans } from '@/lib/font'
 import '@/styles/globals.css'
 
 export const metadata: Metadata = {
-  title: '~/index',
+  title: '~/',
   description: 'jamie\'s personal website',
   icons: [{
     rel: 'icon',
@@ -12,11 +13,11 @@ export const metadata: Metadata = {
   }],
 }
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+export default function RootLayout({ children, overlayText }: Readonly<{ children: React.ReactNode, overlayText: React.ReactNode }>) {
   return (
     <html
       lang="en"
-      className={`${sans.variable} antialiased ${mono.variable}`}
+      className={`antialiased ${mono.variable}`}
     >
       {process.env.NODE_ENV === 'development' && (
         <head>
@@ -26,8 +27,12 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           />
         </head>
       )}
-      <body>
-        <Providers>{children}</Providers>
+      <body className="font-sans">
+        <Providers>
+          {children}
+          {overlayText}
+        </Providers>
+        <Noise />
       </body>
     </html>
   )

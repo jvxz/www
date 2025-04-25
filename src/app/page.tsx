@@ -1,20 +1,9 @@
-import { buttonVariants } from '@/components/ui/button'
-import { Card } from '@/components/ui/card'
-import Link from 'next/link'
-import { unstable_ViewTransition as ViewTransition } from 'react'
-
 export default function Page() {
   return (
-    <div className="flex h-screen flex-col items-center justify-center gap-4">
-      <ViewTransition name="card">
-        <Card>Before</Card>
-      </ViewTransition>
-      <Link
-        className={buttonVariants()}
-        href="/transition"
-      >
-        Go
-      </Link>
+    <div className="container mx-auto my-32 max-w-screen-md">
+      <div>
+        <h1 className="text-3xl font-medium">Jamie Jacobs</h1>
+      </div>
     </div>
   )
 }
