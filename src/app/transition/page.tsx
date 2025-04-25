@@ -6,12 +6,14 @@ import { unstable_ViewTransition as ViewTransition } from 'react'
 export default function Page() {
   return (
     <div className="flex h-screen flex-col items-center justify-center gap-4">
-      <ViewTransition name="card">
-        <Card>Before</Card>
+      <ViewTransition
+        name="card"
+      >
+        <Card>After</Card>
       </ViewTransition>
       <Link
         className={buttonVariants()}
-        href="/transition"
+        href="/"
       >
         Go
       </Link>
