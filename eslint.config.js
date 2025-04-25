@@ -1,4 +1,5 @@
 import antfu from '@antfu/eslint-config'
+// @ts-ignore
 import nextPlugin from '@next/eslint-plugin-next'
 import tailwindPlugin from 'eslint-plugin-readable-tailwind'
 
