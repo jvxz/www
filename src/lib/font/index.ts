@@ -7,9 +7,15 @@ export const sans = localFont({
   display: 'swap',
 })
 
-export const mono = localFont({
-  src: './ServerMono-Regular.woff2',
-  variable: '--font-server-mono',
+export const mono = JetBrains_Mono({
+  subsets: ['latin'],
+  variable: '--font-jetbrains-mono',
   display: 'swap',
 })
+
+// export const mono = localFont({
+//   src: './ServerMono-Regular.woff2',
+//   variable: '--font-server-mono',
+//   display: 'swap',
+// })
 
