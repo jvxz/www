@@ -5,7 +5,7 @@ const interactiveStyles = {
     destructive: 'bg-destructive/90 text-destructive-foreground hover:bg-destructive active:bg-destructive/90',
     outline: 'border-border/60 border bg-transparent hover:bg-card hover:border-primary/30 active:border-primary/40',
     ghost: 'hover:bg-muted active:bg-muted/80',
-    link: 'text-primary underline-offset-4 hover:underline',
+    link: 'text-muted-foreground underline-offset-4 hover:underline',
   },
   size: {
     default: 'h-8 px-3 py-1.5 text-sm',
