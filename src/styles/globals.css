@@ -154,8 +154,9 @@
 
 @layer base {
   * {
-    @apply border-border outline-ring/50 underline-offset-4;
-    letter-spacing:  0.01em; 
+    @apply border-border outline-ring/50 underline-offset-4 leading-6;
+    letter-spacing:  0.015em; 
+    /* text-box: trim-both cap alphabetic;   */
   }
   body {
     @apply bg-background text-foreground;
