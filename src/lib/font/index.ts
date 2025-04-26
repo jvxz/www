@@ -2,20 +2,13 @@ import { JetBrains_Mono } from 'next/font/google'
 import localFont from 'next/font/local'
 
 export const sans = localFont({
-  src: './UncutSans-Regular.woff2',
-  variable: '--font-uncut-sans',
+  src: './Aspekta-Regular.woff2',
+  variable: '--font-next-sans',
   display: 'swap',
 })
 
 export const mono = JetBrains_Mono({
   subsets: ['latin'],
-  variable: '--font-jetbrains-mono',
+  variable: '--font-next-mono',
   display: 'swap',
 })
-
-// export const mono = localFont({
-//   src: './ServerMono-Regular.woff2',
-//   variable: '--font-server-mono',
-//   display: 'swap',
-// })
-

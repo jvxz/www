@@ -7,8 +7,8 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --font-sans: var(--font-uncut-sans); 
-  --font-mono: var(--font-jetbrains-mono);
+  --font-sans: var(--font-next-sans); 
+  --font-mono: var(--font-next-mono);
 
   --text-base: 1rem;
   --animate-accordion-down: accordion-down 0.15s;

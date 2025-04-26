@@ -17,7 +17,7 @@ export default function RootLayout({ children, overlayText }: Readonly<{ childre
   return (
     <html
       lang="en"
-      className={`antialiased ${mono.variable}`}
+      className={`${sans.variable} antialiased ${mono.variable}`}
     >
       {process.env.NODE_ENV === 'development' && (
         <head>
