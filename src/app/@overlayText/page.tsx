@@ -8,7 +8,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
 
       name="overlay-text"
     >
-      <div className="text-primary fixed right-0 bottom-0 z-50 -translate-y-12 font-mono text-[300px] font-medium tracking-tighter opacity-2 select-none [text-box:_trim-both_cap_alphabetic]">
+      <div className="text-primary fixed right-0 bottom-0 z-50 -translate-y-12 font-mono text-[300px] font-medium tracking-tighter opacity-5 select-none [text-box:_trim-both_cap_alphabetic] dark:opacity-2">
         {slug ?? 'profile'}
       </div>
     </ViewTransition>
