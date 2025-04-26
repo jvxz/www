@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 function Header() {
   return (
-    <div className="space-y-4">
+    <div className="space-y-6">
       <div className="flex items-center gap-4">
         <h1 className="shrink-0 text-4xl font-bold">jamie jacobs</h1>
         <hr className="border-border h-px w-full border" />

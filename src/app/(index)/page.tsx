@@ -4,8 +4,8 @@ import { Projects } from './components/projects'
 
 export default function Page() {
   return (
-    <div className="animate-fancy-fade-in container mx-auto my-32 max-w-screen-md space-y-8">
-      <section className="space-y-4">
+    <div className="animate-fancy-fade-in container mx-auto my-32 max-w-screen-md space-y-16">
+      <section className="space-y-6">
         <Header />
         <Introduction />
       </section>

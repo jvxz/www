@@ -1,6 +1,6 @@
 function Introduction() {
   return (
-    <p className="text-lg">
+    <p className="">
       hi there! i'm a 20 y/o self-taught typescript developer from north georgia. i currently work on passion projects relating to
       {' '}
       <span className="font-bold">ui</span>
