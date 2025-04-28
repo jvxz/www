@@ -11,9 +11,7 @@ function Introduction() {
       {' '}
       full-time, mainly focusing on full-stack web development with
       {' '}
-      <span className="iconify icon-[tabler--brand-nextjs] translate-y-0.75" />
-      {' '}
-      next.js. i have a strong passion of discovering new technologies and concepts, specifically those that enhance quality of life. while i'm not programming, i enjoy spending my time studying art and customizing mechanical keyboards.
+      <span className="font-bold">next.js</span>. i have a strong passion of discovering new technologies and concepts, specifically those that enhance quality of life. while i'm not programming, i enjoy spending my time studying art and customizing mechanical keyboards.
     </p>
   )
 }
