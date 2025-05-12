@@ -1,11 +1,11 @@
-import { Nunito, Roboto_Mono } from 'next/font/google'
+import { Geist_Mono, Nunito } from 'next/font/google'
 
 const sans = Nunito({
   subsets: ['latin'],
   variable: '--next-font-sans',
 })
 
-const mono = Roboto_Mono({
+const mono = Geist_Mono({
   subsets: ['latin'],
   variable: '--next-font-mono',
   weight: ['300', '400', '500', '700'],
