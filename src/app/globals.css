@@ -1,5 +1,6 @@
 @import 'tailwindcss';
 @import 'tw-animate-css';
+@plugin "@iconify/tailwind4";
 
 @layer base {
   * {
@@ -8,6 +9,11 @@
     box-sizing: border-box;
     grid-area: 1 / 1 / 1 / 1;
     min-width: 0;
+  }
+
+  *[class*='font-mono'] {
+    text-box: trim-both cap alphabetic;
+    padding-bottom: 0.5rem;
   }
 
   body {
@@ -22,6 +28,14 @@
 
   .prose a {
     @apply text-primary underline;
+  }
+
+  .prose h1 {
+    @apply text-2xl;
+  }
+
+  .prose h2 {
+    @apply text-xl;
   }
 }
 
