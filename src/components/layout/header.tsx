@@ -17,7 +17,10 @@ export const routes = [
     label: 'Uses',
     href: '/uses',
   },
-
+  {
+    label: 'Time',
+    href: '/time',
+  },
 ]
 
 function LayoutHeader() {

@@ -1,0 +1,7 @@
+export default function Page() {
+  return (
+    <div>
+      <h1>Time</h1>
+    </div>
+  )
+}
