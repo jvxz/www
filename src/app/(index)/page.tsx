@@ -15,7 +15,9 @@ export default function Page() {
         !
       </p>
 
-      <p>While I'm not programming, I enjoy spending my time studying art and customizing mechanical keyboards.</p>
+      {/* <p>While I'm not programming, I enjoy spending my time studying art and customizing mechanical keyboards.</p> */}
+
+      <p>If you'd like to get in touch, feel free to contact me via email! <Link  href="mailto:jamie@wisp.bio">jamie@wisp.bio</Link></p>
 
       <p>Thanks for stopping by!</p>
 

@@ -10,10 +10,6 @@ export const routes = [
     href: '/work',
   },
   {
-    label: 'Contact',
-    href: '/contact',
-  },
-  {
     label: 'Uses',
     href: '/uses',
   },
