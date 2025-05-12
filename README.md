@@ -1,5 +1,3 @@
-<pre
-  style="text-align: center"
->
-  <a style="color: inherit;" href="https://wisp.bio">https://wisp.bio</a>
+<pre align="center">
+  <a href="https://wisp.bio">https://wisp.bio</a>
 </pre>
