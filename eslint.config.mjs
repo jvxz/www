@@ -31,7 +31,6 @@ export default antfu({
 
   rules: {
     ...rtw.configs.warning.rules,
-    'readable-tailwind/multiline': 'off',
 
     'antfu/if-newline': 'off',
     'arrow-body-style': ['warn', 'as-needed', {
@@ -40,6 +39,32 @@ export default antfu({
     'node/prefer-global/process': 'off',
     'object-shorthand': ['warn', 'always'],
     'perfectionist/sort-imports': 'error',
+    'readable-tailwind/multiline': 'off',
+    'react/no-array-index-key': 'error',
+    'react/no-children-prop': 'error',
+    'react/no-duplicate-jsx-props': 'error',
+    'react/no-implicit-key': 'error',
+    'react/no-useless-fragment': 'error',
+    'react/prefer-shorthand-boolean': 'error',
+    'react-dom/no-unknown-property': 'error',
+    'react-hooks-extra/no-unnecessary-use-callback': 'error',
+    'react-hooks-extra/no-unnecessary-use-memo': 'error',
+    'style/jsx-closing-bracket-location': [1, 'line-aligned'],
+    'style/jsx-closing-tag-location': [1, 'line-aligned'],
+    'style/jsx-max-props-per-line': [
+      'error',
+      {
+        maximum: 1,
+        when: 'always',
+      },
+    ],
+    'style/jsx-one-expression-per-line': [
+      'error',
+      {
+        allow: 'non-jsx',
+      },
+    ],
+    'style/jsx-quotes': ['error', 'prefer-double'],
     'style/function-paren-newline': ['error', 'multiline'],
     'style/indent': ['error', 2],
     'style/multiline-ternary': ['error', 'always-multiline'],
