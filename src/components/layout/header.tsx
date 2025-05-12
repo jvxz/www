@@ -1,4 +1,5 @@
-import Link from 'next/link'
+import { Link } from 'next-view-transitions'
+import { HeaderLink } from '../header/link'
 import { Button } from '../ui/button'
 
 export const routes = [
@@ -32,9 +33,9 @@ function LayoutHeader() {
       <ul className="flex items-center gap-2">
         {routes.map(route => (
           <li key={route.href}>
-            <Button asChild>
-              <Link href={route.href}>{route.label}</Link>
-            </Button>
+            <HeaderLink href={route.href}>
+              {route.label}
+            </HeaderLink>
           </li>
         ))}
       </ul>
