@@ -3,12 +3,11 @@
 
 @layer base {
   * {
-    @apply underline-offset-3 text-base border-border;
+    @apply selection:bg-secondary selection:text-background underline-offset-3 text-base border-border;
     font-weight: 500;
     box-sizing: border-box;
     grid-area: 1 / 1 / 1 / 1;
     min-width: 0;
-    @apply selection:bg-secondary selection:text-background;
   }
 
   body {
@@ -55,7 +54,7 @@
   --text-2xl: calc(var(--text-base) * 1.75);
   --text-xl: calc(var(--text-base) * 1.5);
   --text-lg: calc(var(--text-base) * 1.25);
-  --text-base: 1.05rem;
+  --text-base: 1.075rem;
   --text-sm: calc(var(--text-base) * 0.9);
   --text-xs: calc(var(--text-base) * 0.75);
 
