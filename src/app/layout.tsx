@@ -15,7 +15,11 @@ export default function RootLayout({ children }: Readonly<{
 }>) {
   return (
     <html lang="en">
-      <body className={`antialiased ${font.sans.variable + font.mono.variable}`}>
+      <body className={`
+      ${font.mono.variable}
+      ${font.sans.variable}
+      `}
+      >
         {children}
       </body>
     </html>

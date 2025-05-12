@@ -1,7 +1,6 @@
 @import 'tailwindcss';
 @import 'tw-animate-css';
 
-
 @layer base {
   * {
     @apply underline-offset-3 text-base border-border;
@@ -49,8 +48,8 @@
   --text-sm: calc(var(--text-base) * 0.9);
   --text-xs: calc(var(--text-base) * 0.75);
 
-  --font-sans: 'Nunito', sans-serif;
-  --font-mono: 'System Mono', monospace;
+  --font-sans: var(--next-font-sans);
+  --font-mono: var(--next-font-mono);
 
   --animate-fancy-fade-in: fancy-fade-in 0.65s ease-in-out;
 

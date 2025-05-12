@@ -2,12 +2,12 @@ import { Nunito, Roboto_Mono } from 'next/font/google'
 
 const sans = Nunito({
   subsets: ['latin'],
-  variable: '--font-next-sans',
+  variable: '--next-font-sans',
 })
 
 const mono = Roboto_Mono({
   subsets: ['latin'],
-  variable: '--font-next-mono',
+  variable: '--next-font-mono',
   weight: ['300', '400', '500', '700'],
 })
 
