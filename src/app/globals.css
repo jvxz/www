@@ -16,6 +16,16 @@
   }
 }
 
+@layer utilities {
+  .prose p {
+    @apply mb-6;
+  }
+
+  .prose a {
+    @apply text-primary underline;
+  }
+}
+
 :root {
   --background: hsl(15 66.67% 99%);
   --foreground: hsl(15 0% 20.25%);
