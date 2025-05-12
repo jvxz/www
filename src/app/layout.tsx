@@ -19,7 +19,7 @@ export default function RootLayout({ children }: Readonly<{
   return (
     <ViewTransitions>
       <html lang="en">
-        <body className={cn('container mx-auto max-w-screen-lg', font.mono.variable, font.sans.variable)}>
+        <body className={cn('container mx-auto max-w-screen-md', font.mono.variable, font.sans.variable)}>
           <LayoutHeader />
           <div className="page-transition">{children}</div>
         </body>
