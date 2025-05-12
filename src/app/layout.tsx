@@ -1,4 +1,6 @@
 import type { Metadata } from 'next'
+import { LayoutHeader } from '@/components/layout/header'
+import { cn } from '@/lib/utils'
 import { font } from '../lib/config/font'
 import './globals.css'
 
@@ -15,11 +17,8 @@ export default function RootLayout({ children }: Readonly<{
 }>) {
   return (
     <html lang="en">
-      <body className={`
-      ${font.mono.variable}
-      ${font.sans.variable}
-      `}
-      >
+      <body className={cn('container mx-auto max-w-screen-lg', font.mono.variable, font.sans.variable)}>
+        <LayoutHeader />
         {children}
       </body>
     </html>
