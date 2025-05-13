@@ -27,7 +27,7 @@ function LayoutHeader() {
           dataActive={false}
           href="/"
         >
-          (•◡•)
+          <span className='font-bold'>(•◡•)</span>
         </HeaderLink>
       </div>
       <ul className="flex items-center gap-2">
