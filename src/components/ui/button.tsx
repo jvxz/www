@@ -1,3 +1,4 @@
+import type { ComponentProps } from 'react'
 import { cn } from '@/lib/utils'
 import { Slot } from '@radix-ui/react-slot'
 
@@ -7,12 +8,11 @@ function Button({
   disabled = false,
   asChild = false,
   ...props
-}: {
+}: ComponentProps<'button'> & {
   children: React.ReactNode
   className?: string
   asChild?: boolean
   disabled?: boolean
-  props?: React.ComponentProps<'button'>
 }) {
   const Comp = asChild ? Slot : 'button'
 
@@ -21,7 +21,7 @@ function Button({
       data-slot="button"
       disabled={disabled}
       className={cn(
-        'text-primary px-1 py-0.5 select-none font-medium hover:bg-primary hover:text-background',
+        'text-primary px-1 py-0.5 select-none hover:bg-primary hover:text-background',
         disabled && 'pointer-events-none',
         className,
       )}
