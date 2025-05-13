@@ -2,7 +2,7 @@
 import { Skeleton } from '@/components/ui/skeleton'
 import { useTimeFilterParams } from '@/hooks/use-time-filter-params'
 import { useWakatime } from '@/hooks/use-wakatime'
-import { d } from '@/lib/utils'
+import { formatDuration } from '@/lib/utils'
 import * as Progress from '@radix-ui/react-progress'
 
 function FilteredContent() {
@@ -13,9 +13,7 @@ function FilteredContent() {
     <article className="prose">
       <h3 className="text-muted-foreground !mb-4">total</h3>
       <h1 className="!mb-12 h-10">
-        {d({
-          second: data.total_seconds,
-        }).format('h[h] m[m]')}
+        {formatDuration(data.total_seconds)}
       </h1>
       <h3 className="text-muted-foreground !mb-6">languages</h3>
       {data.languages
