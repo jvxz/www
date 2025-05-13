@@ -24,9 +24,9 @@ function FilteredContent() {
             className="mb-8"
             key={language.name}
           >
-            <div className="flex items-center justify-between">
-              <p className="!mb-2 font-mono">{language.name}</p>
-              <p className="!mb-2 font-mono">{language.percent}%</p>
+            <div className="flex mb-2 items-center justify-between">
+              <p className="!mb-2 h-6 font-mono">{language.name}</p>
+              <p className="!mb-2 h-6 font-mono">{language.percent}%</p>
             </div>
             <LanguageProgress progress={language.percent} />
           </div>
@@ -64,7 +64,7 @@ function FilteredContentFallback() {
       <Skeleton className="!mb-12 h-10 w-36" />
       <h3 className="text-muted-foreground !mb-6">languages</h3>
       {Array.from({
-        length: 4,
+        length: 5,
       }).map((_, i) => (
         <div
           className="mb-8"
