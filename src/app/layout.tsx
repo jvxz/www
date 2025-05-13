@@ -18,8 +18,11 @@ export default function RootLayout({ children }: Readonly<{
 }>) {
   return (
     <ViewTransitions>
-      <html lang="en" className='bg-background'>
-        <body className={cn('antialiased container mx-auto max-w-screen-md animate-fancy-fade-in', font.mono.variable, font.sans.variable)}>
+      <html
+        lang="en"
+        className="bg-background"
+      >
+        <body className={cn('animate-fancy-fade-in container mx-auto max-w-screen-md antialiased', font.mono.variable, font.sans.variable)}>
           <LayoutHeader />
           <div className="page-transition">{children}</div>
         </body>
