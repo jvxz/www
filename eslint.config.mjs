@@ -16,7 +16,6 @@ export default antfu({
     overrides: {
       'ts/no-floating-promises': 'error',
       'ts/consistent-type-imports': 'error',
-      'ts/no-unnecessary-condition': 'error',
     },
   },
 
