@@ -27,12 +27,10 @@ export const timeFilterTabs: Array<{
   },
 ] as const
 
-export type TimeFilterOptionParam = Exclude<TimeFilterOption, 'today'> | null
-
 function useTimeFilterParams() {
-  const [filter, setFilter] = useQueryState<TimeFilterOptionParam>('filter', {
-    defaultValue: null,
-    parse: value => value as TimeFilterOptionParam,
+  const [filter, setFilter] = useQueryState<TimeFilterOption>('filter', {
+    defaultValue: 'today',
+    parse: value => value as TimeFilterOption,
   })
 
   return {
