@@ -8,7 +8,7 @@ export default function Page() {
       <section className="space-y-16">
         <WorkCard
           sourceUrl="https://github.com/jvxz/ezra"
-          webUrl="https://ezra.wisp.bio"
+          webUrl="https://ezra.jamie.to"
         >
           <h1 className="font-mono">ezra</h1>
           <p className="text-muted-foreground text-sm">
@@ -21,7 +21,7 @@ export default function Page() {
         </WorkCard>
         <WorkCard
           sourceUrl="https://github.com/jvxz/mieru"
-          webUrl="https://mieru.wisp.bio"
+          webUrl="https://mieru.jamie.to"
         >
           <h1 className="font-mono">mieru</h1>
           <p className="text-muted-foreground text-sm">

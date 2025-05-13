@@ -23,7 +23,7 @@ export default function Page() {
       <p>
         If you'd like to get in touch, feel free to contact me via email!
         {' '}
-        <Link href="mailto:jamie@wisp.bio">jamie@wisp.bio</Link>
+        <Link href="mailto:hi@jamie.to">hi@jamie.to</Link>
       </p>
 
       <p>Thanks for stopping by!</p>

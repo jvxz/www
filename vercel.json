@@ -3,7 +3,7 @@
   "rewrites": [
     {
       "source": "/monitor/:match*",
-      "destination": "https://wisp.bio/_vercel/:match*"
+      "destination": "https://jamie.to/_vercel/:match*"
     }
   ]
 }
