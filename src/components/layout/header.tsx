@@ -1,4 +1,4 @@
-import { HeaderLink } from '../header/link'
+import { ActiveLink } from '../active-link'
 
 export const routes = [
   {
@@ -23,19 +23,19 @@ function LayoutHeader() {
   return (
     <header className="my-16 flex items-center justify-between">
       <div className="text-primary font-bold tracking-widest select-none">
-        <HeaderLink
+        <ActiveLink
           dataActive={false}
           href="/"
         >
-          <span className='font-bold'>(•◡•)</span>
-        </HeaderLink>
+          <span className="font-bold">(•◡•)</span>
+        </ActiveLink>
       </div>
       <ul className="flex items-center gap-2">
         {routes.map(route => (
           <li key={route.href}>
-            <HeaderLink href={route.href}>
+            <ActiveLink href={route.href}>
               {route.label}
-            </HeaderLink>
+            </ActiveLink>
           </li>
         ))}
       </ul>
