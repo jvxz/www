@@ -32,10 +32,14 @@
 
   .prose h1 {
     @apply text-2xl font-mono mb-6;
+    text-box: trim-both cap alphabetic;
+    padding-bottom: 0.5rem;
   }
 
   .prose h2 {
     @apply text-xl font-mono mb-6;
+    text-box: trim-both cap alphabetic;
+    padding-bottom: 0.5rem;
   }
 
   .prose ul {
