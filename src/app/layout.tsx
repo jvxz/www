@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { LayoutHeader } from '@/components/layout/header'
-import { TRPCReactProvider } from '@/lib/trpc/client'
+import { Providers } from '@/components/providers'
 import { cn } from '@/lib/utils'
 import { ViewTransitions } from 'next-view-transitions'
 import { font } from '../lib/config/font'
@@ -25,9 +25,9 @@ export default function RootLayout({ children }: Readonly<{
       >
         <body className={cn('animate-fancy-fade-in container mx-auto max-w-screen-md antialiased', font.mono.variable, font.sans.variable)}>
           <LayoutHeader />
-          <TRPCReactProvider>
+          <Providers>
             <div className="page-transition">{children}</div>
-          </TRPCReactProvider>
+          </Providers>
         </body>
       </html>
     </ViewTransitions>
