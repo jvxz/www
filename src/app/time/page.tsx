@@ -18,6 +18,9 @@ function TimeContent() {
   return (
     <div>
       <h1>{data?.username}</h1>
+      <h2>{data?.total_seconds}</h2>
+      <h3>{data?.languages.map(language => language.name)}</h3>
+      <h3>{data?.projects.map(project => project.name)}</h3>
     </div>
   )
 }

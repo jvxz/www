@@ -1,27 +1,51 @@
 import { ArkErrors, type } from 'arktype'
 
-const schema = type({
+const todaySchema = type({
   data: {
     username: '\'jamie\'',
     status: '\'ok\'',
-    editors: type({
-      digital: 'string',
-      hours: 'number',
-      minutes: 'number',
+    total_seconds: 'number',
+    languages: type({
       name: 'string',
       percent: 'number',
-      seconds: 'number',
-      text: 'string',
+      total_seconds: 'number',
+    }).array(),
+    projects: type({
+      name: 'string',
+      percent: 'number',
+      total_seconds: 'number',
+    }).array(),
+  },
+})
+
+const periodSchema = type({
+  data: {
+    username: '\'jamie\'',
+    status: '\'ok\'',
+    total_seconds: 'number',
+    daily_average: 'number',
+    languages: type({
+      name: 'string',
+      percent: 'number',
+      total_seconds: 'number',
+    }).array(),
+    projects: type({
+      name: 'string',
+      percent: 'number',
       total_seconds: 'number',
     }).array(),
   },
 })
 
 export async function getWakaTime() {
-  const res = await fetch('https://wakapi.dev/api/compat/wakatime/v1/users/jamie/stats/today')
+  const res = await fetch('https://wakapi.dev/api/compat/wakatime/v1/users/jamie/stats/7_days', {
+    headers: {
+      Authorization: `Bearer ${btoa(process.env.WAKA_API_KEY ?? '')}`,
+    },
+  })
   const data = await res.json()
 
-  const parsed = schema(data)
+  const parsed = periodSchema(data)
 
   if (parsed instanceof ArkErrors) {
     throw new TypeError(parsed.summary)
