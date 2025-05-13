@@ -73,6 +73,10 @@ export default function Page() {
             Ghostty
           </li>
           <li>
+            <span className="iconify icon-[mingcute--git-branch-line]" />
+            git
+          </li>
+          <li>
             <span className="iconify icon-[mingcute--package-2-line]" />
             bun / pnpm
           </li>
