@@ -17,7 +17,7 @@ export default function Page() {
       <section className="space-y-16">
         <WorkCard
           sourceUrl="https://github.com/jvxz/ezra"
-          webUrl="https://ezra.jamie.to"
+          // webUrl="https://ezra.jamie.to"
         >
           <h1 className="font-mono">ezra</h1>
           <p className="text-muted-foreground text-sm">
@@ -30,7 +30,7 @@ export default function Page() {
         </WorkCard>
         <WorkCard
           sourceUrl="https://github.com/jvxz/mieru"
-          webUrl="https://mieru.jamie.to"
+          // webUrl="https://mieru.jamie.to"
         >
           <h1 className="font-mono">mieru</h1>
           <p className="text-muted-foreground text-sm">
@@ -41,6 +41,7 @@ export default function Page() {
           </p>
           <p>
             Beautiful, opinionated fork of
+            {' '}
             <Link
               href="https://ui.shadcn.com"
               target="_blank"
@@ -67,7 +68,7 @@ export default function Page() {
   )
 }
 
-function WorkCard({ children, className, sourceUrl, webUrl }: { children: React.ReactNode, className?: string, sourceUrl: string, webUrl: string }) {
+function WorkCard({ children, className, sourceUrl, webUrl }: { children: React.ReactNode, className?: string, sourceUrl?: string, webUrl?: string }) {
   return (
     <div className={cn('prose relative !space-y-2', className)}>
       {children}
@@ -75,33 +76,36 @@ function WorkCard({ children, className, sourceUrl, webUrl }: { children: React.
 
       </div>
       <div className="absolute top-0 right-0 my-1 flex items-center gap-2">
-        <Button
-          className="flex items-center gap-2"
-          asChild
-        >
-          <Link
-            className="!no-underline"
-            href={webUrl}
-            target="_blank"
+        {webUrl && (
+          <Button
+            className="flex items-center gap-2"
+            asChild
           >
-            Website
-            <span className="iconify icon-[mingcute--globe-2-fill]"></span>
-          </Link>
-        </Button>
-        <Button
-          className="flex items-center gap-2"
-          asChild
-        >
-          <Link
-            className="!no-underline"
-            href={sourceUrl}
-            target="_blank"
+            <Link
+              className="!no-underline"
+              href={webUrl}
+              target="_blank"
+            >
+              Website
+              <span className="iconify icon-[mingcute--globe-2-fill]"></span>
+            </Link>
+          </Button>
+        )}
+        {sourceUrl && (
+          <Button
+            className="flex items-center gap-2"
+            asChild
           >
-            Source
-            <span className="iconify icon-[mingcute--github-fill]"></span>
-          </Link>
-        </Button>
-
+            <Link
+              className="!no-underline"
+              href={sourceUrl}
+              target="_blank"
+            >
+              Source
+              <span className="iconify icon-[mingcute--github-fill]"></span>
+            </Link>
+          </Button>
+        )}
       </div>
     </div>
   )
