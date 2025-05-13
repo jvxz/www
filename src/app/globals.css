@@ -31,11 +31,27 @@
   }
 
   .prose h1 {
-    @apply text-2xl;
+    @apply text-2xl font-mono mb-6;
   }
 
   .prose h2 {
-    @apply text-xl;
+    @apply text-xl font-mono mb-6;
+  }
+
+  .prose ul {
+    @apply list-inside flex flex-col gap-2;
+  }
+
+  .prose li {
+    @apply flex items-center gap-2 pl-4;
+  }
+
+  .prose li > .iconify {
+    @apply bg-primary size-5 -translate-y-0.5;
+  }
+
+  .prose li > svg {
+    @apply text-primary size-5 -translate-y-0.5;
   }
 }
 
