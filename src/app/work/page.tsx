@@ -11,7 +11,12 @@ export default function Page() {
           webUrl="https://ezra.wisp.bio"
         >
           <h1 className="font-mono">ezra</h1>
-          <p className="text-muted-foreground text-sm">creator, maintainer <span className='font-bold'>⋅</span> jan. 2025 ─ present</p>
+          <p className="text-muted-foreground text-sm">
+            creator, maintainer
+            <span className="font-bold">⋅</span>
+            {' '}
+            jan. 2025 ─ present
+          </p>
           <p>Modern, fast, local-first time tracker for RaterHub workers.</p>
         </WorkCard>
         <WorkCard
@@ -19,15 +24,33 @@ export default function Page() {
           webUrl="https://mieru.wisp.bio"
         >
           <h1 className="font-mono">mieru</h1>
-          <p className="text-muted-foreground text-sm">creator, maintainer <span className='font-bold'>⋅</span> feb. 2025 ─ present</p>
-          <p>Beautiful, opinionated fork of <Link href="https://ui.shadcn.com" target="_blank" >shadcn/ui</Link>.</p>
+          <p className="text-muted-foreground text-sm">
+            creator, maintainer
+            <span className="font-bold">⋅</span>
+            {' '}
+            feb. 2025 ─ present
+          </p>
+          <p>
+            Beautiful, opinionated fork of
+            <Link
+              href="https://ui.shadcn.com"
+              target="_blank"
+            >shadcn/ui
+            </Link>
+            .
+          </p>
         </WorkCard>
         <WorkCard
           sourceUrl="https://github.com/jvxz/esgist"
           webUrl="https://www.npmjs.com/package/esgist"
         >
           <h1 className="font-mono">esgist</h1>
-          <p className="text-muted-foreground text-sm">creator, maintainer <span className='font-bold'>⋅</span> apr. 2025 ─ present</p>
+          <p className="text-muted-foreground text-sm">
+            creator, maintainer
+            <span className="font-bold">⋅</span>
+            {' '}
+            apr. 2025 ─ present
+          </p>
           <p>Easily convert your GitHub Gist to an ESLint config via a CLI.</p>
         </WorkCard>
       </section>
@@ -39,8 +62,8 @@ function WorkCard({ children, className, sourceUrl, webUrl }: { children: React.
   return (
     <div className={cn('prose relative !space-y-2', className)}>
       {children}
-      <div className="absolute bottom-0 right-0 my-1 flex items-center gap-2">
-        
+      <div className="absolute right-0 bottom-0 my-1 flex items-center gap-2">
+
       </div>
       <div className="absolute top-0 right-0 my-1 flex items-center gap-2">
         <Button

@@ -1,4 +1,5 @@
 import antfu from '@antfu/eslint-config'
+import next from '@next/eslint-plugin-next'
 import rtw from 'eslint-plugin-readable-tailwind'
 
 export default antfu({
@@ -16,11 +17,13 @@ export default antfu({
     overrides: {
       'ts/no-floating-promises': 'error',
       'ts/consistent-type-imports': 'error',
+      'ts/no-unnecessary-condition': 'warn',
     },
   },
 
   plugins: {
     'readable-tailwind': rtw,
+    '@next/next': next,
   },
 
   ignores: [
@@ -29,6 +32,7 @@ export default antfu({
   ],
 
   rules: {
+    ...next.configs.recommended.rules,
     ...rtw.configs.warning.rules,
 
     'antfu/if-newline': 'off',

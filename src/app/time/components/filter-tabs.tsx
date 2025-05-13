@@ -7,7 +7,7 @@ function FilterTabs() {
   const { filter, setFilter } = useTimeFilterParams()
 
   return (
-    <section className="flex gap-2 mb-8">
+    <section className="mb-8 flex gap-2">
       {timeFilterTabs.map(tab => (
         <Button
           onClick={() => setFilter(tab.value === 'today' ? null : tab.value)}
