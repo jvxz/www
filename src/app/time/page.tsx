@@ -1,6 +1,15 @@
+import type { Metadata } from 'next'
 import { Suspense } from 'react'
 import { FilterTabs } from './components/filter-tabs'
 import { FilteredContent, FilteredContentFallback } from './components/filtered-content'
+
+export const metadata: Metadata = {
+  title: 'Time',
+  description: 'Jamie\'s time spent coding!',
+  icons: {
+    icon: 'https://github.com/jvxz.png',
+  },
+}
 
 export default function Page() {
   return (

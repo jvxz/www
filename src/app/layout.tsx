@@ -7,8 +7,8 @@ import { font } from '../lib/config/font'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'jamie',
-  description: 'jamie\'s bio!',
+  title: 'Jamie Jacobs',
+  description: 'Jamie\'s bio!',
   icons: {
     icon: 'https://github.com/jvxz.png',
   },

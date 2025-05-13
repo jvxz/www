@@ -1,6 +1,15 @@
+import type { Metadata } from 'next'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import Link from 'next/link'
+
+export const metadata: Metadata = {
+  title: 'Work',
+  description: 'Jamie\'s work!',
+  icons: {
+    icon: 'https://github.com/jvxz.png',
+  },
+}
 
 export default function Page() {
   return (

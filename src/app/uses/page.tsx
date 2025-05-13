@@ -1,4 +1,13 @@
+import type { Metadata } from 'next'
 import { Icon } from '@/components/ui/icon'
+
+export const metadata: Metadata = {
+  title: 'Uses',
+  description: 'What Jamie uses!',
+  icons: {
+    icon: 'https://github.com/jvxz.png',
+  },
+}
 
 export default function Page() {
   return (
