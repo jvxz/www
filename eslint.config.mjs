@@ -16,7 +16,7 @@ export default antfu({
     overrides: {
       'ts/no-floating-promises': 'error',
       'ts/consistent-type-imports': 'error',
-      'ts/no-unnecessary-condition': 'warn',
+      'ts/no-unnecessary-condition': 'error',
     },
   },
 
@@ -90,7 +90,6 @@ export default antfu({
     }],
     'style/quotes': ['error', 'single'],
     'style/space-in-parens': ['error', 'never'],
-    'ts/no-unnecessary-condition': 'error',
     'ts/strict-boolean-expressions': 'off',
     'unicorn/throw-new-error': 'off',
   },
