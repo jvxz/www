@@ -3,14 +3,14 @@ import { Link } from 'next-view-transitions'
 export default function Page() {
   return (
     <article className='prose'>
-      <p>Hi there! I'm a 20 year old
+      <p>Hi there! I'm a 20-year-old
       {' '}
       <span className="font-medium text-blue-400">TypeScript</span>
       {' '}
       developer from Blue Ridge, Georgia.</p>
 
       <p>
-        I am currently working full-time on personal OSS projects, focusing on full-stack web applications. I have a strong passion of discovering new technologies and concepts, specifically those that enhance quality of life. You can find my work{" "}
+        I am currently working full-time on personal OSS projects, mostly specializing in full-stack web applications. I have a strong passion of discovering new technologies and concepts, specifically those that enhance quality of life. You can find my work{" "}
         <Link href="/work">here</Link>
         !
       </p>
