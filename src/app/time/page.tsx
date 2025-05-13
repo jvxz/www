@@ -4,8 +4,8 @@ import { FilteredContent, FilteredContentFallback } from './components/filtered-
 
 export default function Page() {
   return (
-    <article>
-      <h1 className="mb-6 font-mono text-2xl">time</h1>
+    <article className="flex flex-col gap-4">
+      <h1 className="font-mono text-2xl">time</h1>
       <FilterTabs />
       <Suspense fallback={<FilteredContentFallback />}>
         <FilteredContent />

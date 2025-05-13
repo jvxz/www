@@ -7,6 +7,8 @@ import { formatDuration } from '@/lib/utils'
 import * as Progress from '@radix-ui/react-progress'
 import { AnimatePresence, motion } from 'motion/react'
 
+const MAX_ITEMS = 4
+
 const variants = {
   hidden: {
     opacity: 0,
@@ -38,13 +40,13 @@ function FilteredContent() {
   const { data } = useWakatime(filter)
 
   return (
-    <article className="prose">
-      <div className="flex items-center justify-between">
-        <div className="space-y-2">
-          <h3 className="text-muted-foreground !mb-4">total</h3>
+    <article className="prose flex flex-col gap-8">
+      <section className="flex justify-between">
+        <div className="h-28">
+          <h3 className="text-muted-foreground">total</h3>
           <AnimatePresence mode="wait">
             <motion.h1
-              className="!mb-12 h-10"
+              className="h-8"
               key={data.total_seconds}
               {...motionProps}
             >
@@ -54,11 +56,11 @@ function FilteredContent() {
         </div>
 
         {filter !== 'yesterday' && filter !== 'today' && data.daily_average && (
-          <div className="space-y-2">
-            <h3 className="text-muted-foreground !mb-4 text-right">average</h3>
+          <div className="h-28">
+            <h3 className="text-muted-foreground text-right">average</h3>
             <AnimatePresence mode="wait">
               <motion.h1
-                className="!mb-12 h-10"
+                className="h-8"
                 key={data.daily_average}
                 {...motionProps}
               >
@@ -67,29 +69,50 @@ function FilteredContent() {
             </AnimatePresence>
           </div>
         )}
-      </div>
+      </section>
 
-      <h3 className="text-muted-foreground !mb-6">languages</h3>
-      {data.languages
-        .filter(language => language.name !== 'unknown')
-        .slice(0, 5)
-        .map(language => (
-          <div
-            className="mb-8"
-            key={language.name}
-          >
-            <div className="mb-2 flex items-center justify-between">
-              <p className="!mb-2 h-6 font-mono">{language.name}</p>
-              <p className="!mb-2 h-6 font-mono">{language.percent}%</p>
+      <section>
+        <h3 className="text-muted-foreground ">languages</h3>
+        {data.languages
+          .filter(language => language.name !== 'unknown')
+          .slice(0, MAX_ITEMS)
+          .map(language => (
+            <div
+              className="mb-8"
+              key={language.name}
+            >
+              <div className="mb-2 flex items-center justify-between">
+                <p className="!mb-2 h-6 font-mono">{language.name}</p>
+                <p className="!mb-2 h-6 font-mono">{language.percent}%</p>
+              </div>
+              <PercentDisplay progress={language.percent} />
             </div>
-            <LanguageProgress progress={language.percent} />
-          </div>
-        ))}
+          ))}
+      </section>
+
+      <section>
+        <h3 className="text-muted-foreground ">projects</h3>
+        {data.projects
+          .filter(language => language.name !== 'unknown')
+          .slice(0, MAX_ITEMS)
+          .map(language => (
+            <div
+              className="mb-8"
+              key={language.name}
+            >
+              <div className="mb-2 flex items-center justify-between">
+                <p className="!mb-2 h-6 font-mono">{language.name}</p>
+                <p className="!mb-2 h-6 font-mono">{language.percent}%</p>
+              </div>
+              <PercentDisplay progress={language.percent} />
+            </div>
+          ))}
+      </section>
     </article>
   )
 }
 
-function LanguageProgress({
+function PercentDisplay({
   progress,
   ...props
 }: Progress.ProgressProps & {
@@ -115,41 +138,66 @@ function FilteredContentFallback() {
   const { filter } = useTimeFilterParams()
 
   return (
-    <article className="prose">
-      <div className="flex items-center justify-between">
-        <div className="space-y-2">
-          <h3 className="text-muted-foreground !mb-4">total</h3>
+    <article className="prose flex flex-col gap-8">
+      <section className="flex justify-between">
+        <div className="h-28">
+          <h3 className="text-muted-foreground">total</h3>
           <AnimatePresence mode="wait">
-            <Skeleton className="!mb-12 h-10 w-36" />
+            <Skeleton
+              className="h-8"
+            />
           </AnimatePresence>
         </div>
 
-        {filter !== 'yesterday' && filter !== 'today' && (
-          <div className="space-y-2">
-            <h3 className="text-muted-foreground !mb-4 text-right">average</h3>
+        {filter !== 'yesterday' && filter !== 'today' &&  (
+          <div className="h-28">
+            <h3 className="text-muted-foreground text-right">average</h3>
             <AnimatePresence mode="wait">
-              <Skeleton className="!mb-12 h-10 w-36" />
+              <Skeleton
+                className="h-8"
+              />
             </AnimatePresence>
           </div>
         )}
-      </div>
+      </section>
 
-      <h3 className="text-muted-foreground !mb-6">languages</h3>
-      {Array.from({
-        length: 5,
-      }).map((_, i) => (
-        <div
-          className="mb-8"
-          // eslint-disable-next-line react/no-array-index-key
-          key={i}
-        >
-          <div className="mb-4 flex items-center justify-between">
-            <Skeleton className="h-6 w-24" />
-            <Skeleton className="h-6 w-24" />
+      <section>
+        <h3 className="text-muted-foreground ">languages</h3>
+        {Array.from({
+          length: MAX_ITEMS,
+        }).map((_, i) => (
+            <div
+              className="mb-8"
+              // eslint-disable-next-line react/no-array-index-key
+              key={i}
+            >
+              <div className="mb-2 flex items-center justify-between">
+                <Skeleton className="h-8 w-24" />
+                <Skeleton className="h-6 w-24" />
+              </div>
+              <PercentDisplay progress={0} />
+            </div>
+          ))}
+      </section>
+
+      <section>
+        <h3 className="text-muted-foreground ">projects</h3>
+        {Array.from({
+          length: MAX_ITEMS,
+        }).map((_, i) => (
+          <div
+            className="mb-8"
+            // eslint-disable-next-line react/no-array-index-key
+            key={i}
+          >
+            <div className="mb-2 flex items-center justify-between">
+              <Skeleton className="h-8 w-24" />
+              <Skeleton className="h-6 w-24" />
+            </div>
+            <PercentDisplay progress={0} />
           </div>
-          <LanguageProgress progress={0} />
-        </div>
-      ))}
+        ))}
+      </section>
     </article>
   )
 }
