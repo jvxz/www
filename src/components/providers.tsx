@@ -1,4 +1,5 @@
 import { TRPCReactProvider } from '@/lib/trpc/client'
+import { Analytics } from '@vercel/analytics/react'
 import { NuqsAdapter } from 'nuqs/adapters/next/app'
 
 function Providers({ children }: { children: React.ReactNode }) {
@@ -6,6 +7,7 @@ function Providers({ children }: { children: React.ReactNode }) {
     <TRPCReactProvider>
       <NuqsAdapter>
         {children}
+        <Analytics basePath="/monitor" />
       </NuqsAdapter>
     </TRPCReactProvider>
   )
