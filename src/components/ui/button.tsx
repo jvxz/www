@@ -21,7 +21,7 @@ function Button({
       data-slot="button"
       disabled={disabled}
       className={cn(
-        'text-primary px-1 py-0.5 select-none hover:bg-primary hover:text-background',
+        'text-primary px-1 py-0.5 select-none font-medium hover:bg-primary hover:text-background',
         disabled && 'pointer-events-none',
         className,
       )}
