@@ -37,7 +37,13 @@
   }
 
   .prose h2 {
-    @apply text-xl font-mono mb-6;
+    @apply text-lg font-mono mb-6;
+    text-box: trim-both cap alphabetic;
+    padding-bottom: 0.5rem;
+  }
+
+  .prose h3 {
+    @apply text-base font-mono mb-6;
     text-box: trim-both cap alphabetic;
     padding-bottom: 0.5rem;
   }
@@ -70,7 +76,7 @@
   --primary-foreground: hsl(0 0% 100%);
   --secondary: hsl(190 71.83% 72.16%);
   --secondary-foreground: hsl(0 0% 10.2%);
-  --muted: hsl(13.33 42.86% 95.88%);
+  --muted: hsl(13.33 42.86% 93.88%);
   --muted-foreground: hsl(10.91 1.57% 50%);
   --accent: hsl(0 20% 97.06%);
   --accent-foreground: hsl(0 0% 0%);

@@ -41,7 +41,7 @@ const periodSchema = type({
 })
 
 export async function getWakatime(filter: TimeFilterOption) {
-  const res = await fetch(`https://wakapi.dev/api/compat/wakatime/v1/users/jamie/stats/${filter ?? 'today'}`, {
+  const res = await fetch(`https://wakapi.dev/api/compat/wakatime/v1/users/jamie/stats/${filter}`, {
     headers: {
       Authorization: `Bearer ${btoa(process.env.WAKA_API_KEY ?? '')}`,
     },

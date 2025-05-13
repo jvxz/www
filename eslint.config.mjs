@@ -90,6 +90,7 @@ export default antfu({
     }],
     'style/quotes': ['error', 'single'],
     'style/space-in-parens': ['error', 'never'],
+    'ts/no-unnecessary-condition': 'error',
     'ts/strict-boolean-expressions': 'off',
     'unicorn/throw-new-error': 'off',
   },
