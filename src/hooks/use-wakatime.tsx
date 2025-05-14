@@ -6,6 +6,10 @@ function useWakatime(filter: TimeFilterOption) {
   const trpc = useTRPC()
   const { data, isLoading, error } = useSuspenseQuery(trpc.getWakatime.queryOptions({
     filter,
+  }, {
+    refetchInterval: 5 * 60 * 1000,
+    refetchIntervalInBackground: false,
+    refetchOnMount: true,
   }))
 
   return {
