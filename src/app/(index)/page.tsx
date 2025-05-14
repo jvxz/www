@@ -4,7 +4,7 @@ export default function Page() {
   return (
     <article className="prose">
       <p>
-        Hi there! I'm a 20-year-old
+        Hi there! I'm a 21-year-old
         {' '}
         <span className="font-medium text-blue-400">TypeScript</span>
         {' '}
