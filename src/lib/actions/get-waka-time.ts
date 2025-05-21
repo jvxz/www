@@ -9,6 +9,7 @@ const schema = type({
     status: '\'ok\'',
     total_seconds: 'number',
     daily_average: 'number | null',
+    start: 'string',
     languages: type({
       name: 'string',
       percent: 'number',
