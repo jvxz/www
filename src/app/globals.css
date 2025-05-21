@@ -9,6 +9,8 @@
     box-sizing: border-box;
     grid-area: 1 / 1 / 1 / 1;
     min-width: 0;
+    /* scrollbar-width: thin; */
+    scrollbar-color: var(--secondary) var(--background);
   }
 
   *[class*='font-mono'] {
@@ -17,7 +19,7 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans;
+    @apply bg-background text-foreground font-sans overflow-y-scroll;
   }
 }
 
