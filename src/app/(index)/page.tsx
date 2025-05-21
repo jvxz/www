@@ -1,3 +1,4 @@
+import { ActiveLink } from '@/components/active-link'
 import { Link } from 'next-view-transitions'
 
 export default function Page() {
@@ -8,7 +9,7 @@ export default function Page() {
         {' '}
         <span className="font-medium text-blue-400">TypeScript</span>
         {' '}
-        developer from Blue Ridge, Georgia.
+        developer from northern Georgia.
       </p>
 
       <p>
@@ -28,7 +29,27 @@ export default function Page() {
 
       <p>Thanks for stopping by!</p>
 
-      <p>─ Jamie</p>
+      <div className="flex items-center justify-between">
+        <p>─ Jamie</p>
+        <div className="flex -translate-y-3 items-center gap-2">
+          <ActiveLink
+            href="https://www.linkedin.com/in/jjac2004/"
+            className="grid size-12 place-items-center"
+            target="_blank"
+          >
+            <span className="icon-[mingcute--linkedin-fill] iconify size-6" />
+            <span className="sr-only">LinkedIn</span>
+          </ActiveLink>
+          <ActiveLink
+            href="https://github.com/jvxz"
+            className="grid size-12 place-items-center"
+            target="_blank"
+          >
+            <span className="icon-[mingcute--github-fill] iconify size-6" />
+            <span className="sr-only">GitHub</span>
+          </ActiveLink>
+        </div>
+      </div>
     </article>
   )
 }
