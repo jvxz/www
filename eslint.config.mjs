@@ -1,5 +1,6 @@
 import antfu from '@antfu/eslint-config'
 import next from '@next/eslint-plugin-next'
+import a11y from 'eslint-plugin-jsx-a11y'
 import rtw from 'eslint-plugin-readable-tailwind'
 
 export default antfu({
@@ -96,4 +97,4 @@ export default antfu({
     'ts/strict-boolean-expressions': 'off',
     'unicorn/throw-new-error': 'off',
   },
-})
+}).prepend(a11y.flatConfigs.recommended)
