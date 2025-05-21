@@ -13,10 +13,12 @@
     "@tanstack/react-query-devtools": "^5.76.1",
     "@vercel/analytics": "^1.5.0",
     "dayjs": "^1.11.13",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
     "motion": "^12.11.0",
     "next": "15.3.2",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "tailwind-scrollbar": "^4.0.2"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^4.13.0",
