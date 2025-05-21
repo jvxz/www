@@ -18,8 +18,8 @@ function Background() {
 const mouseSens = 0.4
 
 function Dot() {
-  const x = useMotionValue(window ? Math.random() * (window.innerWidth) : 0)
-  const y = useMotionValue(window ? Math.random() * (window.innerHeight) : 0)
+  const x = useMotionValue(typeof window !== 'undefined' ? Math.random() * (window.innerWidth) : 0)
+  const y = useMotionValue(typeof window !== 'undefined' ? Math.random() * (window.innerHeight) : 0)
 
   useEffect(() => {
     const sens = mouseSens * Math.random() / 10
