@@ -61,6 +61,10 @@ export default function Page() {
             React Query
           </li>
           <li>
+            <Icon.Motion />
+            motion <span className='text-muted-foreground text-xs'>(Framer Motion)</span>
+          </li>
+          <li>
             <Icon.Effect />
             Effect
           </li>
