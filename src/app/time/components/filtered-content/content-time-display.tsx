@@ -3,7 +3,7 @@ import type { Variants } from 'motion/react'
 import { Skeleton } from '@/components/ui/skeleton'
 import { useTimeFilterParams } from '@/hooks/use-time-filter-params'
 import { useWakatime } from '@/hooks/use-wakatime'
-import { formatDuration } from '@/lib/utils'
+import { formatDate, formatDuration } from '@/lib/utils'
 
 const variants = {
   hidden: {
@@ -38,7 +38,11 @@ function ContentTimeDisplay() {
   return (
     <section className="flex justify-between">
       <div className="h-28">
-        <h3 className="text-muted-foreground">total</h3>
+        <h3 className="text-muted-foreground">
+          total
+          {' '}
+          <span className="text-muted-foreground fade-in animate-fade-in text-xs">(from {formatDate(data.start)})</span>
+        </h3>
         <h1
           className="h-8"
           key={data.total_seconds}

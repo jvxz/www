@@ -8,7 +8,7 @@ function ContentPercentBar({
 }) {
   return (
     <Progress.Root
-      className="bg-muted relative h-3 w-full translate-z-0 overflow-hidden rounded-full"
+      className="bg-muted/50 relative h-3 w-full translate-z-0 overflow-hidden rounded-full"
       value={progress}
       {...props}
     >

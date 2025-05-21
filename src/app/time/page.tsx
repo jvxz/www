@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import { Suspense } from 'react'
 import { FilterTabs } from './components/filter-tabs'
 import { FilteredContent, FilteredContentFallback } from './components/filtered-content'
@@ -19,6 +20,18 @@ export default function Page() {
       <Suspense fallback={<FilteredContentFallback />}>
         <FilteredContent />
       </Suspense>
+      <p className="text-muted-foreground text-right text-sm">
+        Data collected from
+        {' '}
+        <Link
+          href="https://wakatime.com"
+          target="_blank"
+          className="text-primary underline"
+        >
+          WakaTime
+        </Link>
+        .
+      </p>
     </article>
 
   )
