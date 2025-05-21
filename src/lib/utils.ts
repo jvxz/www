@@ -26,3 +26,7 @@ export function formatDuration(seconds: number) {
     minutes,
   }).format('H[h] m[m]')
 }
+
+export function formatDate(date: string) {
+  return d(date).format('MMM D, YYYY')
+}
