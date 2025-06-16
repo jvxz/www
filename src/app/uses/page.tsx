@@ -3,7 +3,7 @@ import { Icon } from '@/components/ui/icon'
 
 export const metadata: Metadata = {
   title: 'Uses',
-  description: 'What Jamie uses!',
+  description: 'My go-to stack, tools, and environment!',
   icons: {
     icon: 'https://github.com/jvxz.png',
   },
@@ -62,7 +62,19 @@ export default function Page() {
           </li>
           <li>
             <Icon.Motion />
-            motion <span className='text-muted-foreground text-xs'>(Framer Motion)</span>
+            motion
+            {' '}
+            <span className="text-muted-foreground text-xs">
+              (Framer Motion)
+            </span>
+          </li>
+          <li>
+            <Icon.Cloudflare />
+            Cloudflare
+          </li>
+          <li>
+            <Icon.Hono />
+            Hono
           </li>
           <li>
             <Icon.Effect />
