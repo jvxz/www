@@ -1,11 +1,11 @@
-import { Geist_Mono, Nunito } from 'next/font/google'
+import { IBM_Plex_Mono, Nunito } from 'next/font/google'
 
 const sans = Nunito({
   subsets: ['latin'],
   variable: '--next-font-sans',
 })
 
-const mono = Geist_Mono({
+const mono = IBM_Plex_Mono({
   subsets: ['latin'],
   variable: '--next-font-mono',
   weight: ['300', '400', '500', '700'],
