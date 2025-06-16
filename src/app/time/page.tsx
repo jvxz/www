@@ -6,7 +6,7 @@ import { FilteredContent, FilteredContentFallback } from './components/filtered-
 
 export const metadata: Metadata = {
   title: 'Time',
-  description: 'Jamie\'s time spent coding!',
+  description: 'My time spent coding! (since Apr 13, 2025)',
   icons: {
     icon: 'https://github.com/jvxz.png',
   },
@@ -15,7 +15,10 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <article className="flex flex-col gap-4">
-      <h1 className="font-mono text-2xl">time</h1>
+      <div className="flex gap-3">
+        <h1 className="font-mono text-2xl">time</h1>
+        <p className="text-muted-foreground self-end font-mono text-sm">est. Apr 13, 2025</p>
+      </div>
       <FilterTabs />
       <Suspense fallback={<FilteredContentFallback />}>
         <FilteredContent />
@@ -33,7 +36,6 @@ export default function Page() {
         .
       </p>
     </article>
-
   )
 }
 
