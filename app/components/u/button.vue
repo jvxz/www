@@ -11,7 +11,7 @@ const props = withDefaults(defineProps<{
 })
 
 const button = tv({
-  base: 'h-8 cursor-pointer px-1',
+  base: 'flex h-8 cursor-pointer items-center gap-2 px-1',
   variants: {
     size: {
       default: 'h-8',
