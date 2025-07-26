@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <section class="flex flex-col gap-12">
+  <section class="flex flex-col gap-16">
     <UsesCard>
       <template #title>
         hardware
