@@ -12,5 +12,20 @@
       </NuxtLink>
     </p>
     <p>Thanks for stopping by! ✨</p>
+    <div class="flex justify-between">
+      <p>- Jamie</p>
+<div class="flex gap-2">
+        <NuxtLink to="https://github.com/jvxz" target="_blank">
+          <UButton>
+            <Icon name="simple-icons:github" />
+          </UButton>
+        </NuxtLink>
+        <NuxtLink to="https://www.linkedin.com/in/jjac2004/" target="_blank">
+          <UButton>
+            <Icon name="simple-icons:linkedin" />
+          </UButton>
+        </NuxtLink>
+</div>
+    </div>
   </div>
 </template>
