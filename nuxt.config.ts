@@ -22,12 +22,22 @@ export default defineNuxtConfig({
     },
   },
 
+  icon: {
+    customCollections: [
+      {
+        dir: './app/assets/icons',
+        prefix: 'custom',
+      },
+    ],
+  },
+
   modules: [
     '@nuxt/eslint',
     '@nuxt/fonts',
     '@nuxt/icon',
     '@nuxt/image',
     '@nuxt/scripts',
+    '@vueuse/nuxt',
   ],
 
   vite: {
