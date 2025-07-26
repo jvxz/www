@@ -1,13 +1,7 @@
 <script lang="ts" setup>
 const { span } = useTimeSpanQuery()
 
-const app = useNuxtApp()
-
 const { data, status } = useFetch('/api/get-time', {
-  cache: 'force-cache',
-  getCachedData(key) {
-    return app.payload.data[key] || app.static.data[key]
-  },
   query: {
     span,
   },
