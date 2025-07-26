@@ -44,14 +44,6 @@ export default defineNuxtConfig({
     },
   },
 
-  routeRules: {
-    '/api/get-time': {
-      cache: {
-        maxAge: 180,
-      },
-    },
-  },
-
   runtimeConfig: {
     wakatimeKey: '',
   },

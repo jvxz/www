@@ -1,5 +1,7 @@
 import { ArkErrors, type } from 'arktype'
 
+export const edge = true
+
 const WakapiSchema = type({
   data: {
     daily_average: 'number | null',
@@ -21,7 +23,7 @@ const WakapiSchema = type({
   },
 })
 
-export default defineEventHandler(async (event) => {
+export default defineCachedEventHandler(async (event) => {
   const query = getQuery<{ span: TimeSpan }>(event)
 
   const { wakatimeKey } = useRuntimeConfig()
@@ -46,4 +48,7 @@ export default defineEventHandler(async (event) => {
   }
 
   return res.data
+}, {
+  maxAge: 180,
+  swr: true,
 })

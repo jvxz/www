@@ -1,7 +1,13 @@
 <script lang="ts" setup>
 const { span } = useTimeSpanQuery()
 
-const { data } = useFetch('/api/get-time', {
+const app = useNuxtApp()
+
+const { data, status } = useFetch('/api/get-time', {
+  cache: 'force-cache',
+  getCachedData(key) {
+    return app.payload.data[key] || app.static.data[key]
+  },
   query: {
     span,
   },
@@ -20,15 +26,17 @@ const total = computed(() => {
 </script>
 
 <template>
-  <div class="flex flex-col gap-6">
+  <div v-if="data" class="flex flex-col gap-6">
     <div class="flex flex-col gap-4 font-mono">
-      <p class="text-sm font-normal text-muted-foreground">
-        total <span class="text-xs">(from {{ start }})</span>
-      </p>
-      <h2 v-if="data" class="text-2xl font-medium">
+      <div class="flex justify-between">
+        <p class="text-sm font-normal text-muted-foreground">
+          total <span class="text-xs">(from {{ start }})</span>
+        </p>
+        <USpinner v-if="status === 'pending'" class="size-4 text-primary" />
+      </div>
+      <h2 class="text-2xl font-medium">
         {{ total }}
       </h2>
-      <USkeleton v-else class="h-[43.14px] w-48" />
     </div>
     <div class="flex flex-col gap-4 font-mono">
       <p class="text-sm font-normal text-muted-foreground">
@@ -40,14 +48,12 @@ const total = computed(() => {
         class="flex flex-col gap-2"
       >
         <div class="flex justify-between">
-          <p v-if="data" class="text-sm font-medium">
+          <p class="text-sm font-medium">
             {{ language.name }}
           </p>
-          <USkeleton v-else class="h-[23.77px] w-16" />
-          <p v-if="data" class="text-sm">
+          <p class="text-sm">
             {{ language.percent }}%
           </p>
-          <USkeleton v-else class="h-[23.77px] w-16" />
         </div>
         <UProgress :percentage="language.percent" />
       </div>
@@ -70,6 +76,56 @@ const total = computed(() => {
           </p>
         </div>
         <UProgress :percentage="project.percent" />
+      </div>
+    </div>
+  </div>
+  <div v-else class="flex flex-col gap-6">
+    <div class="flex flex-col gap-4 font-mono">
+      <p class="text-sm font-normal text-muted-foreground">
+        total <USkeleton class="inline h-[18px] w-16" />
+      </p>
+      <h2 class="text-2xl font-medium">
+        <USkeleton class="h-[43.14px] w-48" />
+      </h2>
+    </div>
+    <div class="flex flex-col gap-4 font-mono">
+      <p class="text-sm font-normal text-muted-foreground">
+        languages
+      </p>
+      <div
+        v-for="(_, index) in Array(4).fill(null)"
+        :key="index"
+        class="flex flex-col gap-2"
+      >
+        <div class="flex justify-between">
+          <p class="text-sm font-medium">
+            <USkeleton class="h-[23.77px] w-16" />
+          </p>
+          <p class="text-sm">
+            <USkeleton class="h-[23.77px] w-16" />
+          </p>
+        </div>
+        <USkeleton class="h-[10.31px] w-full" />
+      </div>
+    </div>
+    <div class="flex flex-col gap-4 font-mono">
+      <p class="text-sm font-normal text-muted-foreground">
+        projects
+      </p>
+      <div
+        v-for="(_, index) in Array(4).fill(null)"
+        :key="index"
+        class="flex flex-col gap-2"
+      >
+        <div class="flex justify-between">
+          <p class="text-sm font-medium">
+            <USkeleton class="h-[23.77px] w-16" />
+          </p>
+          <p class="text-sm">
+            <USkeleton class="h-[23.77px] w-16" />
+          </p>
+        </div>
+        <USkeleton class="h-[10.31px] w-full" />
       </div>
     </div>
   </div>
