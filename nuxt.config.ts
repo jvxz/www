@@ -8,14 +8,12 @@ export default defineNuxtConfig({
   ],
 
   devtools: { enabled: true },
-
   eslint: {
     config: {
       import: false,
       standalone: false,
     },
   },
-
   fonts: {
     defaults: {
       weights: [400, 500],
@@ -39,6 +37,19 @@ export default defineNuxtConfig({
     '@nuxt/scripts',
     '@vueuse/nuxt',
   ],
+
+  routeRules: {
+    '/api/get-time': {
+      cache: {
+        maxAge: 180,
+        swr: true,
+      },
+    },
+  },
+
+  runtimeConfig: {
+    wakatimeKey: '',
+  },
 
   vite: {
     plugins: [
