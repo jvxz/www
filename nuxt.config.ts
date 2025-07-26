@@ -38,11 +38,16 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
   ],
 
+  nitro: {
+    future: {
+      nativeSWR: true,
+    },
+  },
+
   routeRules: {
     '/api/get-time': {
       cache: {
         maxAge: 180,
-        swr: true,
       },
     },
   },
