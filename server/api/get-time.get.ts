@@ -50,5 +50,6 @@ export default defineCachedEventHandler(async (event) => {
   return res.data
 }, {
   maxAge: 180,
+  staleMaxAge: 180,
   swr: true,
 })
