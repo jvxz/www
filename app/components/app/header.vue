@@ -1,8 +1,15 @@
 <template>
   <header class="mt-24 flex items-center gap-2 border-black text-black">
-    <p class="font-bold tracking-widest text-primary select-none">
-      (•◡•)
-    </p>
+    <NuxtLink
+      :style="{
+        pointerEvents: $route.path === '/' ? 'none' : 'auto',
+      }"
+      to="/"
+    >
+      <UButton class="font-bold tracking-widest text-primary select-none">
+        (•◡•)
+      </UButton>
+    </NuxtLink>
     <div class="ml-auto" />
     <UButton :variant="$route.path === '/' ? 'active' : 'default'">
       <NuxtLink to="/">
