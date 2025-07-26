@@ -12,7 +12,7 @@
         <NuxtLink to="https://github.com/jvxz/reskin" target="_blank">
           <UButton>
             Source
-            <Icon name="mynaui:brand-github-solid" class="-translate-y-px" />
+            <Icon name="simple-icons:github" class="-translate-y-px" />
           </UButton>
         </NuxtLink>
       </template>
@@ -25,7 +25,7 @@
       <template #stack>
         <Icon title="Next.js" name="simple-icons:nextdotjs" />
         <Icon title="Drizzle" name="simple-icons:drizzle" />
-        <Icon title="Three.js" name="Three" />
+        <Icon title="Three.js" name="custom:three" />
         <Icon title="Microsoft" name="simple-icons:microsoft" />
       </template>
     </WorkCard>
@@ -43,14 +43,14 @@
         <NuxtLink to="https://github.com/jvxz/otio" target="_blank">
           <UButton>
             Source
-            <Icon name="mynaui:brand-github-solid" class="-translate-y-px" />
+            <Icon name="simple-icons:github" class="-translate-y-px" />
           </UButton>
         </NuxtLink>
       </template>
       <template #stack>
         <Icon title="Zod" name="simple-icons:nodedotjs" />
         <Icon title="Zod" name="simple-icons:zod" />
-        <Icon title="Effect" name="Effect" />
+        <Icon title="Effect" name="custom:effect" />
       </template>
     </WorkCard>
     <WorkCard>
@@ -67,14 +67,14 @@
         <NuxtLink to="https://github.com/jvxz/esgist" target="_blank">
           <UButton>
             Source
-            <Icon name="mynaui:brand-github-solid" class="-translate-y-px" />
+            <Icon name="simple-icons:github" class="-translate-y-px" />
           </UButton>
         </NuxtLink>
       </template>
       <template #stack>
         <Icon title="Zod" name="simple-icons:nodedotjs" />
         <Icon title="Zod" name="simple-icons:vitest" />
-        <Icon title="Effect" name="Effect" />
+        <Icon title="Effect" name="custom:effect" />
       </template>
     </WorkCard>
   </div>
