@@ -20,7 +20,7 @@
         creator, maintainer ⋅ jul. 2025 ─ present
       </template>
       <template #description>
-        Advanced Minecraft skin management for humans.
+        Advanced Minecraft skin management
       </template>
       <template #stack>
         <Icon title="Next.js" name="simple-icons:nextdotjs" />
@@ -37,7 +37,7 @@
         creator, maintainer ⋅ jun. 2025 ─ present
       </template>
       <template #description>
-        Forget about your dev servers.
+        Forget about your dev servers
       </template>
       <template #links>
         <NuxtLink to="https://github.com/jvxz/otio" target="_blank">
@@ -61,7 +61,7 @@
         creator, maintainer ⋅ apr. 2025 ─ present
       </template>
       <template #description>
-        Generate an ESLint config from a GitHub Gist.
+        Generate an ESLint config from a GitHub Gist
       </template>
       <template #links>
         <NuxtLink to="https://github.com/jvxz/esgist" target="_blank">
