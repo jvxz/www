@@ -20,7 +20,7 @@
         creator, maintainer ⋅ jul. 2025 ─ present
       </template>
       <template #description>
-        Advanced Minecraft skin management
+        advanced Minecraft skin management
       </template>
       <template #stack>
         <Icon title="Next.js" name="simple-icons:nextdotjs" />
@@ -37,13 +37,19 @@
         creator, maintainer ⋅ jun. 2025 ─ present
       </template>
       <template #description>
-        Forget about your dev servers
+        elegant inactivity timeout for your development servers
       </template>
       <template #links>
         <NuxtLink to="https://github.com/jvxz/otio" target="_blank">
           <UButton>
+            <Icon name="simple-icons:github" class="-translate-y-0.5" />
             Source
-            <Icon name="simple-icons:github" class="-translate-y-px" />
+          </UButton>
+        </NuxtLink>
+        <NuxtLink to="https://www.npmjs.com/package/otio" target="_blank">
+          <UButton>
+            <Icon name="simple-icons:npm" class="-translate-y-px" />
+            npm
           </UButton>
         </NuxtLink>
       </template>
@@ -61,13 +67,19 @@
         creator, maintainer ⋅ apr. 2025 ─ present
       </template>
       <template #description>
-        Generate an ESLint config from a GitHub Gist
+        generate an ESLint config from a GitHub Gist
       </template>
       <template #links>
         <NuxtLink to="https://github.com/jvxz/esgist" target="_blank">
           <UButton>
+            <Icon name="simple-icons:github" class="-translate-y-0.5" />
             Source
-            <Icon name="simple-icons:github" class="-translate-y-px" />
+          </UButton>
+        </NuxtLink>
+        <NuxtLink to="https://www.npmjs.com/package/esgist" target="_blank">
+          <UButton>
+            <Icon name="simple-icons:npm" class="-translate-y-px" />
+            npm
           </UButton>
         </NuxtLink>
       </template>
