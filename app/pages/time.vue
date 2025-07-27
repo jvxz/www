@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 defineOgImageComponent('Main', {
+  description: 'My time I\'ve spent on programming, sourced from Wakapi',
   title: 'Time',
 })
 

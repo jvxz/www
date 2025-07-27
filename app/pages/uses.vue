@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 defineOgImageComponent('Main', {
+  description: 'The hardware and software I use',
   title: 'Uses',
 })
 </script>
