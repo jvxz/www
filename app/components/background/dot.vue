@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { motion, useMotionValue, useSpring } from 'motion-v'
 
-const sens = ref(0.4 * Math.random() / 10)
+const sens = ref(0.8 * Math.random() / 10)
 
 const { height, width } = useWindowSize()
 const initX = ref(typeof window !== 'undefined' ? Math.random() * (width.value) : 0)
