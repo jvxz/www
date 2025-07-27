@@ -24,6 +24,7 @@
     "@vueuse/router": "^13.5.0",
     "arktype": "^2.1.20",
     "cva": "1.0.0-beta.4",
+    "motion-v": "^1.6.1",
     "nuxt": "^4.0.1",
     "tailwind-variants": "^1.0.0",
     "tailwindcss": "^4.1.11",
