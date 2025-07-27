@@ -48,6 +48,18 @@ export default defineNuxtConfig({
     wakatimeKey: '',
   },
 
+  routeRules: {
+    '/': {
+      prerender: true,
+    },
+    '/work': {
+      prerender: true,
+    },
+    '/uses': {
+      prerender: true,
+    },
+  },
+
   vite: {
     plugins: [
       tailwindcss(),
