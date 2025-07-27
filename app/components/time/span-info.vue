@@ -1,7 +1,13 @@
 <script lang="ts" setup>
+const emit = defineEmits<{
+  isPending: [boolean]
+}>()
+
 const { span } = useTimeSpanQuery()
 
-const { data, status } = useFetch('/api/get-time', {
+const { data } = useFetch('/api/get-time', {
+  onRequest: () => emit('isPending', true),
+  onResponse: () => emit('isPending', false),
   query: {
     span,
   },
@@ -26,7 +32,6 @@ const total = computed(() => {
         <p class="text-sm font-normal text-muted-foreground">
           total <span class="text-xs">(from {{ start }})</span>
         </p>
-        <USpinner v-if="status === 'pending'" class="size-4 text-primary" />
       </div>
       <h2 class="text-2xl font-medium">
         {{ total }}
