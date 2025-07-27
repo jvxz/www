@@ -2,24 +2,31 @@
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineNuxtConfig({
+  app: {
+    head: {
+      titleTemplate: '%s',
+    },
+  },
   compatibilityDate: '2025-07-15',
+
   css: [
     '~/assets/css/globals.css',
   ],
 
   devtools: { enabled: true },
+
   eslint: {
     config: {
       import: false,
       standalone: false,
     },
   },
+
   fonts: {
     defaults: {
       weights: [400, 500],
     },
   },
-
   icon: {
     customCollections: [
       {
@@ -36,6 +43,7 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxt/scripts',
     '@vueuse/nuxt',
+    '@nuxtjs/seo',
   ],
 
   nitro: {
@@ -44,20 +52,27 @@ export default defineNuxtConfig({
     },
   },
 
-  runtimeConfig: {
-    wakatimeKey: '',
+  ogImage: {
+    fonts: [
+      'Nunito:400',
+      'Nunito:700',
+    ],
   },
 
   routeRules: {
     '/': {
       prerender: true,
     },
-    '/work': {
-      prerender: true,
-    },
     '/uses': {
       prerender: true,
     },
+    '/work': {
+      prerender: true,
+    },
+  },
+
+  runtimeConfig: {
+    wakatimeKey: '',
   },
 
   vite: {

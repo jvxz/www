@@ -1,3 +1,11 @@
+<script lang="ts" setup>
+defineOgImageComponent('Main')
+
+useSeoMeta({
+  title: 'Home',
+})
+</script>
+
 <template>
   <div class="flex flex-col gap-6">
     <p>Hi there! I'm a 21-year-old <span class="font-medium text-blue-400">TypeScript</span> developer from northern Georgia, est. September 2024.</p>
@@ -14,7 +22,7 @@
     <p>Thanks for stopping by! ✨</p>
     <div class="flex justify-between">
       <p>- Jamie</p>
-<div class="flex gap-2">
+      <div class="flex gap-2">
         <NuxtLink to="https://github.com/jvxz" target="_blank">
           <UButton>
             <Icon name="simple-icons:github" />
@@ -25,7 +33,7 @@
             <Icon name="simple-icons:linkedin" />
           </UButton>
         </NuxtLink>
-</div>
+      </div>
     </div>
   </div>
 </template>

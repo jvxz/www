@@ -1,5 +1,7 @@
 <script lang="ts" setup>
-
+defineOgImageComponent('Main', {
+  title: 'Uses',
+})
 </script>
 
 <template>
@@ -53,7 +55,9 @@
           <Icon name="custom:trpc" /> tRPC
         </li>
         <li>
-          <Icon name="custom:motion" class="!size-5" /> motion <p class="text-xs text-muted-foreground">(Framer Motion)</p>
+          <Icon name="custom:motion" class="!size-5" /> motion <p class="text-xs text-muted-foreground">
+            (Framer Motion)
+          </p>
         </li>
         <li>
           <Icon name="simple-icons:drizzle" /> Drizzle

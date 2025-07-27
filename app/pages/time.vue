@@ -1,4 +1,8 @@
 <script lang="ts" setup>
+defineOgImageComponent('Main', {
+  title: 'Time',
+})
+
 const isPending = ref(false)
 </script>
 

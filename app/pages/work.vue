@@ -1,5 +1,7 @@
 <script lang="ts" setup>
-
+defineOgImageComponent('Main', {
+  title: 'Work',
+})
 </script>
 
 <template>
