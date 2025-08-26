@@ -23,6 +23,13 @@ const total = computed(() => {
   }
   return data.value.human_readable_total.replace(' hrs', 'h').replace(' mins', 'm')
 })
+
+function formatLanguageName(name: string) {
+  return name
+    .replace('Typescript', 'TypeScript')
+    .replace('Javascript', 'JavaScript')
+    .replace('Json', 'JSON')
+}
 </script>
 
 <template>
@@ -48,7 +55,7 @@ const total = computed(() => {
       >
         <div class="flex justify-between">
           <p class="text-sm font-medium">
-            {{ language.name }}
+            {{ formatLanguageName(language.name) }}
           </p>
           <p class="text-sm">
             {{ language.percent }}%
