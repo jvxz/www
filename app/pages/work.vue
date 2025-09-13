@@ -14,8 +14,14 @@ defineOgImageComponent('Main', {
       <template #links>
         <NuxtLink to="https://github.com/jvxz/reskin" target="_blank">
           <UButton>
-            Source
             <Icon name="simple-icons:github" class="-translate-y-px" />
+            Source
+          </UButton>
+        </NuxtLink>
+        <NuxtLink to="https://reskin.im" target="_blank">
+          <UButton>
+            <Icon name="tabler:link" class="-translate-y-px" />
+            Website
           </UButton>
         </NuxtLink>
       </template>
@@ -23,7 +29,7 @@ defineOgImageComponent('Main', {
         creator, maintainer ⋅ jul. 2025 ─ present
       </template>
       <template #description>
-        advanced Minecraft skin management
+        Advanced Minecraft skin management
       </template>
       <template #stack>
         <Icon title="Next.js" name="simple-icons:nextdotjs" />
@@ -40,7 +46,7 @@ defineOgImageComponent('Main', {
         creator, maintainer ⋅ jun. 2025 ─ present
       </template>
       <template #description>
-        elegant inactivity timeout for your development servers
+        Elegant inactivity timeout for your development servers
       </template>
       <template #links>
         <NuxtLink to="https://github.com/jvxz/otio" target="_blank">
@@ -70,7 +76,7 @@ defineOgImageComponent('Main', {
         creator, maintainer ⋅ apr. 2025 ─ present
       </template>
       <template #description>
-        generate an ESLint config from a GitHub Gist
+        Generate an ESLint config from a GitHub Gist
       </template>
       <template #links>
         <NuxtLink to="https://github.com/jvxz/esgist" target="_blank">
