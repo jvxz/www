@@ -42,5 +42,10 @@
     "eslint-plugin-better-tailwindcss": "^3.7.6",
     "eslint-plugin-format": "^1.0.1",
     "otio": "^0.0.1"
+  },
+  "pnpm": {
+    "overrides": {
+      "vite": "npm:rolldown-vite@latest"
+    }
   }
 }
