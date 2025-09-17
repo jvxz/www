@@ -23,7 +23,7 @@ const WakapiSchema = type({
   },
 })
 
-export default defineCachedEventHandler(async (event) => {
+export default defineEventHandler(async (event) => {
   const query = getQuery<{ span: TimeSpan }>(event)
 
   const { wakatimeKey } = useRuntimeConfig()
@@ -48,9 +48,4 @@ export default defineCachedEventHandler(async (event) => {
   }
 
   return res.data
-}, {
-  getKey(event) {
-    return event.path
-  },
-  maxAge: 60,
 })
