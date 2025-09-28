@@ -3,26 +3,26 @@ const emit = defineEmits<{
   isPending: [boolean]
 }>()
 
+const nuxtApp = useNuxtApp()
 const { span } = useTimeSpanQuery()
 
-const { data } = useFetch('/api/get-time', {
-  onRequest: () => emit('isPending', true),
-  onResponse: () => emit('isPending', false),
+const { data, pending } = useFetch('/api/get-time', {
+  deep: false,
+  getCachedData(key) {
+    return nuxtApp.payload.data?.[key] || nuxtApp.static?.data?.[key] || undefined
+  },
   query: {
     span,
   },
 })
 
+watch(pending, value => emit('isPending', value))
+
 const start = computed(() => {
   return useDateFormat(data.value?.start ?? '', 'MMM DD, YYYY')
 })
 
-const total = computed(() => {
-  if (!data.value) {
-    return null
-  }
-  return data.value.human_readable_total.replace(' hrs', 'h').replace(' mins', 'm')
-})
+const total = computed(() => data.value?.human_readable_total.replace(' hrs', 'h').replace(' mins', 'm'))
 
 function formatLanguageName(name: string) {
   return name

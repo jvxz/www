@@ -17,11 +17,11 @@ const isPending = ref(false)
         <USpinner v-if="isPending" class="size-8 text-primary" />
       </div>
       <div class="flex items-center gap-1">
-        <TimeSpanButton span="today" />
-        <TimeSpanButton span="yesterday" />
-        <TimeSpanButton span="7_days" />
-        <TimeSpanButton span="30_days" />
-        <TimeSpanButton span="all_time" />
+        <TimeSpanButton
+          v-for="span in timeSpanOptions"
+          :key="span"
+          :span="span"
+        />
       </div>
     </div>
     <TimeSpanInfo @is-pending="isPending = $event" />
