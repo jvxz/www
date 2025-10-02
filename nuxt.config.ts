@@ -69,6 +69,10 @@ export default defineNuxtConfig({
     wakatimeKey: '',
   },
 
+  site: {
+    url: 'https://jamie.to',
+  },
+
   vite: {
     plugins: [
       tailwindcss(),
