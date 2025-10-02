@@ -51,8 +51,10 @@ export default defineNuxtConfig({
   ],
 
   nitro: {
-    future: {
-      nativeSWR: true,
+    prerender: {
+      crawlLinks: true,
+      ignore: ['/api', '/time'],
+      routes: ['/'],
     },
   },
 
@@ -61,18 +63,6 @@ export default defineNuxtConfig({
       'Nunito:400',
       'Nunito:700',
     ],
-  },
-
-  routeRules: {
-    '/': {
-      prerender: true,
-    },
-    '/uses': {
-      prerender: true,
-    },
-    '/work': {
-      prerender: true,
-    },
   },
 
   runtimeConfig: {
