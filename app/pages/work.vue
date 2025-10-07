@@ -12,18 +12,18 @@ defineOgImageComponent('Main', {
         reskin
       </template>
       <template #links>
-        <NuxtLink to="https://github.com/jvxz/reskin" target="_blank">
-          <UButton>
-            <Icon name="simple-icons:github" class="-translate-y-px" />
+        <UButton as-child>
+          <NuxtLink to="https://github.com/jvxz/reskin" target="_blank" class="flex items-center gap-2">
+            <Icon name="simple-icons:github" class="-translate-y-0.5" />
             Source
-          </UButton>
-        </NuxtLink>
-        <NuxtLink to="https://reskin.im" target="_blank">
-          <UButton>
-            <Icon name="tabler:link" class="-translate-y-px" />
+          </NuxtLink>
+        </UButton>
+        <UButton as-child>
+          <NuxtLink to="https://reskin.im" target="_blank" class="flex items-center gap-2">
+            <Icon name="tabler:link" class="-translate-y-0.5" />
             Website
-          </UButton>
-        </NuxtLink>
+          </NuxtLink>
+        </UButton>
       </template>
       <template #subtitle>
         creator, maintainer ⋅ jul. 2025 ─ present
@@ -32,10 +32,40 @@ defineOgImageComponent('Main', {
         Advanced Minecraft skin management
       </template>
       <template #stack>
-        <Icon title="Next.js" name="simple-icons:nextdotjs" />
+        <Icon title="Nuxt" name="simple-icons:nuxt" />
         <Icon title="Drizzle" name="simple-icons:drizzle" />
         <Icon title="Three.js" name="custom:three" />
         <Icon title="Microsoft" name="simple-icons:microsoft" />
+      </template>
+    </WorkCard>
+    <WorkCard>
+      <template #title>
+        overcast
+      </template>
+      <template #subtitle>
+        creator, maintainer ⋅ feb. 2025 ─ present
+      </template>
+      <template #description>
+        Simple SoundCloud archival web app
+      </template>
+      <template #links>
+        <UButton as-child>
+          <NuxtLink to="https://github.com/jvxz/overcast" target="_blank" class="flex items-center gap-2">
+            <Icon name="simple-icons:github" class="-translate-y-0.5" />
+            Source
+          </NuxtLink>
+        </UButton>
+        <UButton as-child>
+          <NuxtLink to="https://overcast.jamie.to" target="_blank" class="flex items-center gap-2">
+            <Icon name="tabler:link" class="-translate-y-0.5" />
+            Website
+          </NuxtLink>
+        </UButton>
+      </template>
+      <template #stack>
+        <Icon title="Nuxt" name="simple-icons:nuxt" />
+        <Icon title="Redis" name="simple-icons:redis" />
+        <Icon title="MinIO" name="simple-icons:minio" />
       </template>
     </WorkCard>
     <WorkCard>
@@ -49,21 +79,29 @@ defineOgImageComponent('Main', {
         Elegant inactivity timeout for your development servers
       </template>
       <template #links>
-        <NuxtLink to="https://github.com/jvxz/otio" target="_blank">
-          <UButton>
+        <UButton as-child>
+          <NuxtLink
+            to="https://github.com/jvxz/otio"
+            target="_blank"
+            class="flex items-center gap-2"
+          >
             <Icon name="simple-icons:github" class="-translate-y-0.5" />
             Source
-          </UButton>
-        </NuxtLink>
-        <NuxtLink to="https://www.npmjs.com/package/otio" target="_blank">
-          <UButton>
-            <Icon name="simple-icons:npm" class="-translate-y-px" />
+          </NuxtLink>
+        </UButton>
+        <UButton as-child>
+          <NuxtLink
+            to="https://www.npmjs.com/package/otio"
+            target="_blank"
+            class="flex items-center gap-2"
+          >
+            <Icon name="simple-icons:npm" class="-translate-y-0.5" />
             npm
-          </UButton>
-        </NuxtLink>
+          </NuxtLink>
+        </UButton>
       </template>
       <template #stack>
-        <Icon title="Zod" name="simple-icons:nodedotjs" />
+        <Icon title="Node.js" name="simple-icons:nodedotjs" />
         <Icon title="Zod" name="simple-icons:zod" />
         <Icon title="Effect" name="custom:effect" />
       </template>
@@ -79,22 +117,30 @@ defineOgImageComponent('Main', {
         Generate an ESLint config from a GitHub Gist
       </template>
       <template #links>
-        <NuxtLink to="https://github.com/jvxz/esgist" target="_blank">
-          <UButton>
+        <UButton as-child>
+          <NuxtLink
+            to="https://github.com/jvxz/esgist"
+            target="_blank"
+            class="flex items-center gap-2"
+          >
             <Icon name="simple-icons:github" class="-translate-y-0.5" />
-            Source
-          </UButton>
-        </NuxtLink>
-        <NuxtLink to="https://www.npmjs.com/package/esgist" target="_blank">
-          <UButton>
-            <Icon name="simple-icons:npm" class="-translate-y-px" />
-            npm
-          </UButton>
-        </NuxtLink>
+            <p>Source</p>
+          </NuxtLink>
+        </UButton>
+        <UButton as-child>
+          <NuxtLink
+            to="https://www.npmjs.com/package/esgist"
+            target="_blank"
+            class="flex items-center gap-2"
+          >
+            <Icon name="simple-icons:npm" class="-translate-y-0.5" />
+            <p>npm</p>
+          </NuxtLink>
+        </UButton>
       </template>
       <template #stack>
-        <Icon title="Zod" name="simple-icons:nodedotjs" />
-        <Icon title="Zod" name="simple-icons:vitest" />
+        <Icon title="Node.js" name="simple-icons:nodedotjs" />
+        <Icon title="Vitest" name="simple-icons:vitest" />
         <Icon title="Effect" name="custom:effect" />
       </template>
     </WorkCard>
