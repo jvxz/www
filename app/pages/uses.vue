@@ -35,34 +35,20 @@ defineOgImageComponent('Main', {
           <Icon name="simple-icons:typescript" /> TypeScript
         </li>
         <li>
-          <Icon name="simple-icons:react" /> React
-        </li>
-        <li>
           <Icon name="simple-icons:vuedotjs" /> Vue
-        </li>
-        <li>
-          <Icon name="simple-icons:nextdotjs" /> Next.js
         </li>
         <li>
           <Icon name="simple-icons:nuxt" /> Nuxt
         </li>
         <li>
-          <Icon name="simple-icons:tailwindcss" /> Tailwind CSS
-        </li>
-        <li>
-          <Icon name="simple-icons:reactquery" /> React Query
-        </li>
-        <li>
-          <Icon name="custom:trpc" /> tRPC
+          <Icon name="simple-icons:tailwindcss" /> Tailwind
         </li>
         <li>
           <Icon name="custom:motion" class="!size-5" /> motion <p class="text-xs text-muted-foreground">
             (Framer Motion)
           </p>
         </li>
-        <li>
-          <Icon name="simple-icons:drizzle" /> Drizzle
-        </li>
+        
         <li>
           <Icon name="custom:effect" class="!size-5" /> Effect
         </li>
@@ -83,10 +69,7 @@ defineOgImageComponent('Main', {
           <Icon name="majesticons:terminal-line" /> Ghostty
         </li>
         <li>
-          <Icon name="majesticons:git-branch" /> Git
-        </li>
-        <li>
-          <Icon name="majesticons:box-line" /> bun / pnpm
+          <Icon name="majesticons:box-line" /> bun
         </li>
       </template>
     </UsesCard>
