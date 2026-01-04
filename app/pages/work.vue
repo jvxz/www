@@ -26,7 +26,7 @@ defineOgImageComponent('Main', {
         </UButton>
       </template>
       <template #subtitle>
-        creator, maintainer ⋅ jul. 2025 ─ present
+        jul. 2025 ─ present
       </template>
       <template #description>
         Advanced Minecraft skin management
@@ -43,7 +43,7 @@ defineOgImageComponent('Main', {
         overcast
       </template>
       <template #subtitle>
-        creator, maintainer ⋅ feb. 2025 ─ present
+        feb. 2025 ─ present
       </template>
       <template #description>
         Simple SoundCloud archival web app
@@ -73,7 +73,7 @@ defineOgImageComponent('Main', {
         otio
       </template>
       <template #subtitle>
-        creator, maintainer ⋅ jun. 2025 ─ present
+        jun. 2025 ─ present
       </template>
       <template #description>
         Elegant inactivity timeout for your development servers
@@ -111,7 +111,7 @@ defineOgImageComponent('Main', {
         esgist
       </template>
       <template #subtitle>
-        creator, maintainer ⋅ apr. 2025 ─ present
+        apr. 2025 ─ present
       </template>
       <template #description>
         Generate an ESLint config from a GitHub Gist

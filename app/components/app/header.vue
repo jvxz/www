@@ -6,7 +6,7 @@
       }"
       to="/"
     >
-      <UButton class="font-bold tracking-widest text-primary select-none">
+      <UButton class="font-bold tracking-widest text-primary select-none" style="font-synthesis: weight;">
         (•◡•)
       </UButton>
     </NuxtLink>

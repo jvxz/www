@@ -16,7 +16,7 @@ const isPending = ref(false)
         </h1>
         <USpinner v-if="isPending" class="size-8 text-primary" />
       </div>
-      <div class="flex items-center gap-1">
+      <div class="flex items-center gap-2 -ml-1">
         <TimeSpanButton
           v-for="span in timeSpanOptions"
           :key="span"
