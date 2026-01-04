@@ -1,31 +1,7 @@
 @import 'tailwindcss';
 
-@layer base {
-  * {
-    @apply selection:bg-secondary selection:text-background underline-offset-3 text-base border-border;
-    font-weight: 500;
-    letter-spacing: 0.005em;
-    box-sizing: border-box;
-    grid-area: 1 / 1 / 1 / 1;
-    min-width: 0;
-    /* scrollbar-width: thin; */
-    scrollbar-color: var(--secondary) var(--background);
-  }
-
-  *[class*='font-mono'] {
-    font-weight: 400;
-    text-box: trim-both cap alphabetic;
-    padding-bottom: 0.5rem;
-  }
-
-  body {
-    @apply bg-background text-foreground font-sans overflow-y-scroll antialiased;
-    font-family: 'Nunito', sans-serif;
-
-  }
-}
-
 @theme inline {
+  --font-sans: 'SN Pro', sans-serif;
   --font-mono: 'Paper Mono', monospace;
 
   --font-weight-medium: 500;
@@ -80,4 +56,27 @@
   --input: hsl(8.57 25% 89.02%);
   --ring: hsl(0 0% 0%);
   --spacing: 0.2rem;
+}
+
+@layer base {
+  * {
+    @apply selection:bg-secondary selection:text-background underline-offset-3 text-base border-border antialiased;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    font-optical-sizing: auto;
+    box-sizing: border-box;
+    grid-area: 1 / 1 / 1 / 1;
+    min-width: 0;
+    scrollbar-color: var(--secondary) var(--background);
+  }
+
+  *[class*='font-mono'] {
+    font-weight: 400;
+    text-box: trim-both cap alphabetic;
+    padding-bottom: 0.5rem;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans overflow-y-scroll antialiased;
+  }
 }
