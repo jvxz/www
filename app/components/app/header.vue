@@ -16,16 +16,16 @@
         Profile
       </NuxtLink>
     </UButton>
-    <UButton :variant="$route.path === '/work' ? 'active' : 'default'">
+    <!-- <UButton :variant="$route.path === '/work' ? 'active' : 'default'">
       <NuxtLink to="/work">
         Work
       </NuxtLink>
-    </UButton>
-    <UButton :variant="$route.path === '/uses' ? 'active' : 'default'">
+    </UButton> -->
+    <!-- <UButton :variant="$route.path === '/uses' ? 'active' : 'default'">
       <NuxtLink to="/uses">
         Uses
       </NuxtLink>
-    </UButton>
+    </UButton> -->
     <UButton :variant="$route.path === '/time' ? 'active' : 'default'">
       <NuxtLink to="/time">
         Time
