@@ -3,7 +3,7 @@
   "type": "module",
   "private": true,
   "version": "1.0.0",
-  "packageManager": "pnpm@10.27.0",
+  "packageManager": "pnpm@10.28.0",
   "scripts": {
     "build": "nuxt build",
     "dev:web": "nuxt dev",
@@ -21,13 +21,12 @@
     "@nuxtjs/seo": "3.3.0",
     "@nuxtjs/tailwindcss": "6.14.0",
     "@tailwindcss/vite": "^4.1.18",
-    "@unhead/vue": "^2.1.1",
-    "@unocss/nuxt": "66.5.12",
+    "@unhead/vue": "^2.1.2",
     "@vueuse/nuxt": "13.9.0",
     "@vueuse/router": "^13.9.0",
     "arktype": "^2.1.29",
     "cva": "1.0.0-beta.4",
-    "motion-v": "^1.7.5",
+    "motion-v": "^1.9.0",
     "nuxt": "^4.2.2",
     "tailwind-variants": "^3.2.2",
     "tailwindcss": "^4.1.18",
@@ -38,14 +37,15 @@
     "@antfu/eslint-config": "^5.4.1",
     "@iconify-json/majesticons": "^1.2.4",
     "@iconify-json/mingcute": "^1.2.6",
-    "@iconify-json/simple-icons": "^1.2.64",
+    "@iconify-json/simple-icons": "^1.2.66",
     "@iconify-json/tabler": "^1.2.26",
     "eslint": "^9.39.2",
     "eslint-plugin-better-tailwindcss": "^3.8.0",
-    "eslint-plugin-format": "^1.1.0",
+    "eslint-plugin-format": "^1.3.1",
     "otio": "^0.0.1"
   },
   "overrides": {
-    "vite": "npm:rolldown-vite@latest"
+    "vite": "npm:rolldown-vite@latest",
+    "typescript": "npm:tslite@latest"
   }
 }
