@@ -1,13 +1,13 @@
 {
   "name": "Jamie",
   "type": "module",
-  "private": true,
   "version": "1.0.0",
-  "packageManager": "pnpm@10.28.0",
+  "private": true,
+  "packageManager": "bun@latest",
   "scripts": {
     "build": "nuxt build",
     "dev:web": "nuxt dev",
-    "dev": "otio 'pnpm dev:web' -t 900",
+    "dev": "otio 'bun dev:web' -t 900",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
@@ -45,7 +45,7 @@
     "otio": "^0.0.1"
   },
   "overrides": {
-    "vite": "npm:rolldown-vite@latest",
-    "typescript": "npm:tslite@latest"
+    "typescript": "npm:tslite@latest",
+    "vite": "npm:rolldown-vite@latest"
   }
 }

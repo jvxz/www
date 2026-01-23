@@ -1,18 +1,16 @@
-FROM node:22-alpine AS build
+FROM oven/bun:latest-alpine AS build
 
 ARG NUXT_WAKATIME_KEY
 
 WORKDIR /app
 
-RUN corepack enable
+COPY package.json ./
 
-COPY package.json pnpm-lock.yaml ./
-
-RUN pnpm i
+RUN bun install
 
 COPY . ./
 
-RUN pnpm run build
+RUN bun run build
 
 FROM node:22-alpine
 
