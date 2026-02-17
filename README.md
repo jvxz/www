@@ -2,6 +2,6 @@
   <a href="https://jamie.to">https://jamie.to</a>
 </pre>
 
-<pre align="center">
+<p align="center">
   <img src="./public/notbyai.svg" />
-</pre>
+</p>
