@@ -1,5 +1,5 @@
 {
-  "name": "Jamie",
+  "name": "www",
   "type": "module",
   "version": "1.0.0",
   "private": true,
@@ -46,6 +46,6 @@
   },
   "overrides": {
     "typescript": "npm:tslite@latest",
-    "vite": "npm:rolldown-vite@latest"
+    "vite": "beta"
   }
 }
