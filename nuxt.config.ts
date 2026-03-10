@@ -5,7 +5,7 @@ export default defineNuxtConfig({
   app: {
     head: {
       templateParams: {
-        siteName: 'Jamie Jacobs',
+        siteName: 'Jamie\'s site',
       },
       titleTemplate: '%s',
 
