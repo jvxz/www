@@ -6,8 +6,7 @@
   "packageManager": "bun@latest",
   "scripts": {
     "build": "nuxt build",
-    "dev:web": "nuxt dev",
-    "dev": "otio 'bun dev:web' -t 900",
+    "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
@@ -41,8 +40,7 @@
     "@iconify-json/tabler": "^1.2.30",
     "eslint": "^10.0.3",
     "eslint-plugin-better-tailwindcss": "^4.3.2",
-    "eslint-plugin-format": "^2.0.1",
-    "otio": "^0.0.1"
+    "eslint-plugin-format": "^2.0.1"
   },
   "overrides": {
     "typescript": "npm:tslite@latest",
