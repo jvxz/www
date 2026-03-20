@@ -3,7 +3,6 @@
   "type": "module",
   "version": "1.0.0",
   "private": true,
-  "packageManager": "bun@latest",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -41,9 +40,5 @@
     "eslint": "^10.0.3",
     "eslint-plugin-better-tailwindcss": "^4.3.2",
     "eslint-plugin-format": "^2.0.1"
-  },
-  "overrides": {
-    "typescript": "npm:tslite@latest",
-    "vite": "beta"
   }
 }
