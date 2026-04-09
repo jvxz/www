@@ -1,6 +1,5 @@
 <script lang="ts" setup>
-defineOgImageComponent('Main', {
-  description: 'My time I\'ve spent on programming, sourced from Wakapi',
+defineOgImage('Main', {
   title: 'Time',
 })
 
@@ -16,7 +15,7 @@ const isPending = ref(false)
         </h1>
         <USpinner v-if="isPending" class="size-8 text-primary" />
       </div>
-      <div class="flex items-center gap-2 -ml-1">
+      <div class="-ml-1 flex items-center gap-2">
         <TimeSpanButton
           v-for="span in timeSpanOptions"
           :key="span"
@@ -25,7 +24,7 @@ const isPending = ref(false)
       </div>
     </div>
     <TimeSpanInfo @is-pending="isPending = $event" />
-    <p class="self-end text-sm font-normal text-muted-foreground">
+    <!-- <p class="self-end text-sm font-normal text-muted-foreground">
       Data gathered from
       <NuxtLink
         href="https://wakapi.dev"
@@ -34,6 +33,6 @@ const isPending = ref(false)
       >
         Wakapi
       </NuxtLink>
-    </p>
+    </p> -->
   </section>
 </template>

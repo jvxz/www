@@ -6,11 +6,10 @@ const emit = defineEmits<{
 const nuxtApp = useNuxtApp()
 const { span } = useTimeSpanQuery()
 
-const { data, pending } = useFetch('/api/get-time', {
+const { data, error, pending } = useFetch('/api/time', {
   deep: false,
-  getCachedData(key) {
-    return nuxtApp.payload.data?.[key] || nuxtApp.static?.data?.[key] || undefined
-  },
+  getCachedData: key => nuxtApp.payload.data?.[key] || nuxtApp.static?.data?.[key] || undefined,
+  lazy: true,
   query: {
     span,
   },
@@ -33,7 +32,19 @@ function formatLanguageName(name: string) {
 </script>
 
 <template>
-  <div v-if="data" class="flex flex-col gap-6">
+  <div v-if="error" class="flex flex-col gap-6">
+    <div class="flex flex-col gap-4 font-mono">
+      <div class="flex justify-between">
+        <p class="text-sm font-normal text-muted-foreground">
+          something weird happened...
+        </p>
+      </div>
+      <p class="text-sm font-normal text-muted-foreground">
+        {{ error.status }}: {{ error.statusMessage }}
+      </p>
+    </div>
+  </div>
+  <div v-else-if="data" class="flex flex-col gap-6">
     <div class="flex flex-col gap-4 font-mono">
       <div class="flex justify-between">
         <p class="text-sm font-normal text-muted-foreground">

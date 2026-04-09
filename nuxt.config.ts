@@ -30,6 +30,9 @@ export default defineNuxtConfig({
     defaults: {
       weights: [400, 500],
     },
+    families: [
+      { name: 'Nunito', weights: [400, 700] },
+    ],
   },
   icon: {
     customCollections: [
@@ -56,13 +59,6 @@ export default defineNuxtConfig({
       ignore: ['/api', '/time'],
       routes: ['/'],
     },
-  },
-
-  ogImage: {
-    fonts: [
-      'Nunito:400',
-      'Nunito:700',
-    ],
   },
 
   runtimeConfig: {

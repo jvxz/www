@@ -1,7 +1,5 @@
 import { ArkErrors, type } from 'arktype'
 
-export const edge = true
-
 const WakapiSchema = type({
   data: {
     daily_average: 'number | null',
@@ -17,9 +15,9 @@ const WakapiSchema = type({
       total_seconds: 'number',
     }).array(),
     start: 'string',
-    status: '\'ok\'',
+    status: '"ok"',
     total_seconds: 'number',
-    username: '\'jamie\'',
+    username: '"jamie"',
   },
 })
 
@@ -34,15 +32,15 @@ export default defineEventHandler(async (event) => {
     })
   }
 
-  const res = await $fetch<typeof WakapiSchema.t>(`https://wakapi.dev/api/compat/wakatime/v1/users/jamie/stats/${query.span}`, {
+  const res = await $fetch<typeof WakapiSchema.t>(`https://time.jamie.to/api/compat/wakatime/v1/users/jamie/stats/${query.span}`, {
     headers: {
-      Authorization: `Bearer ${btoa(wakatimeKey)}`,
+      Authorization: `Basic ${btoa(wakatimeKey)}`,
     },
   })
 
   if (WakapiSchema(res) instanceof ArkErrors) {
     throw createError({
-      statusCode: 500,
+      statusCode: 422,
       statusMessage: 'Wakapi API returned an invalid response',
     })
   }
