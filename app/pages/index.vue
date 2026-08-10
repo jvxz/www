@@ -9,7 +9,7 @@ useSeoMeta({
 
 <template>
   <div class="flex flex-col gap-6">
-    <p>Hi there! I'm a 21-year-old <span class="font-medium text-blue-400">TypeScript</span> developer from northern Georgia.</p>
+    <p>Hi there! I'm a 22-year-old <span class="font-medium text-blue-400">TypeScript</span> developer from northern Georgia.</p>
     <p>
       I am currently working full-time on personal projects. I have a strong passion in design and am working to find my own aesthetic to incorporate into my projects.
     </p>
