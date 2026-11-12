@@ -32,7 +32,7 @@ export default defineEventHandler(async (event) => {
     })
   }
 
-  const res = await $fetch<typeof WakapiSchema.t>(`https://time.jamie.to/api/compat/wakatime/v1/users/jamie/stats/${query.span}`, {
+  const res = await $fetch<typeof WakapiSchema.t>(`https://wakapi.jamie.to/api/compat/wakatime/v1/users/jamie/stats/${query.span}`, {
     headers: {
       Authorization: `Basic ${btoa(wakatimeKey)}`,
     },
