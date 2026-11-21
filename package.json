@@ -13,7 +13,7 @@
   "dependencies": {
     "@nuxt/eslint": "1.17.0",
     "@nuxt/fonts": "0.14.0",
-    "@nuxt/icon": "2.6.2",
+    "@nuxt/icon": "2.6.3",
     "@nuxt/image": "2.2.1",
     "@nuxt/scripts": "0.13.4",
     "@nuxtjs/seo": "4.0.2",
@@ -23,24 +23,24 @@
     "@unhead/vue": "^2.1.17",
     "@vueuse/nuxt": "14.4.0",
     "@vueuse/router": "^14.4.0",
-    "arktype": "^2.2.9",
+    "arktype": "^2.2.10",
     "cva": "1.0.0-beta.12",
     "motion-v": "^2.12.0",
     "nuxt": "^4.6.4",
-    "satori": "^0.26.0",
+    "satori": "^0.63.2",
     "tailwind-variants": "^3.3.1",
     "tailwindcss": "^4.3.5",
     "vite": "^8.3.8",
     "vue": "^3.5.45",
-    "vue-router": "^5.5.0"
+    "vue-router": "^5.5.1"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^7.7.3",
     "@iconify-json/majesticons": "^1.2.5",
     "@iconify-json/mingcute": "^1.2.10",
-    "@iconify-json/simple-icons": "^1.2.102",
-    "@iconify-json/tabler": "^1.2.45",
-    "eslint": "^10.14.0",
+    "@iconify-json/simple-icons": "^1.2.103",
+    "@iconify-json/tabler": "^1.2.46",
+    "eslint": "^10.15.0",
     "eslint-plugin-better-tailwindcss": "^4.11.0",
     "eslint-plugin-format": "^2.0.1"
   }
